@@ -6,16 +6,16 @@ const customTheme = extendTheme({
       'html, body': {
         fontSize: 'sm',
         color: props.colorMode === 'dark' ? 'white' : 'gray.600',
-        lineHeight: 'tall',
+        lineHeight: 'tall'
       },
       a: {
-        color: props.colorMode === 'dark' ? 'teal.300' : 'teal.500',
-      },
-    }),
+        color: props.colorMode === 'dark' ? 'teal.300' : 'teal.500'
+      }
+    })
   },
   colors: {
-    brand: {},
-  },
+    brand: {}
+  }
 })
 
 export default customTheme
