@@ -1,14 +1,15 @@
-import { Box } from '@chakra-ui/react'
 import { ReactNode } from 'react'
+import { Box } from '@chakra-ui/react'
 
-interface NavbarTypes {
+interface FooterTypes {
   children: ReactNode
 }
 
-const Navbar = ({ children }: NavbarTypes) => {
+const Footer = ({ children }: FooterTypes) => {
   return (
     <Box
       paddingY={10}
+      marginTop={10}
       w='100%'
     >
       {children}
@@ -16,4 +17,4 @@ const Navbar = ({ children }: NavbarTypes) => {
   )
 }
 
-export default Navbar
+export default Footer

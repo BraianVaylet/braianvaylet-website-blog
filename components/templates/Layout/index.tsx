@@ -5,30 +5,13 @@ import MoonIcon from 'components/atoms/Icons/MoonIcon'
 import Navbar from 'components/atoms/Navbar'
 import AlterLink from 'components/atoms/AlterLink'
 import SunIcon from 'components/atoms/Icons/SunIcon'
+import Footer from 'components/atoms/Footer'
+import { Pages, Social } from 'utils/links'
 
 interface LayoutTypes {
   children: ReactNode,
   head: ReactNode
 }
-
-const Links = [
-  {
-    path: '/',
-    title: 'Home'
-  },
-  {
-    path: '/blog',
-    title: 'Blog'
-  },
-  {
-    path: 'https://www.linkedin.com/in/braianvaylet',
-    title: 'Linkedin'
-  },
-  {
-    path: 'https://github.com/BraianVaylet',
-    title: 'Github'
-  }
-]
 
 const Layout = ({ children, head }: LayoutTypes) => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -48,7 +31,7 @@ const Layout = ({ children, head }: LayoutTypes) => {
         align={'center'}
         justify={'flex-start'}
         minH={'100vh'}
-        w={'60%'}
+        w={'50%'}
       >
         <Navbar>
           <Flex
@@ -60,14 +43,16 @@ const Layout = ({ children, head }: LayoutTypes) => {
               justify={'flex-start'}
               align={'center'}
             >
-              {Links.map(link => (
+              {[...Pages, ...Social].map(link => (
                 <AlterLink
                   key={link.title}
                   mr={10}
                   fontSize={'lg'}
-                  href={link.path}>
-                    {link.title}
-                  </AlterLink>
+                  letterSpacing={0.5}
+                  href={link.path}
+                >
+                  {link.title}
+                </AlterLink>
               ))}
             </Flex>
             <IconButtonRotate
@@ -85,9 +70,50 @@ const Layout = ({ children, head }: LayoutTypes) => {
           </Flex>
         </Navbar>
 
-        <Flex>
+        <Flex
+          w={'100%'}
+          minH={'50vh'}
+        >
           {children}
         </Flex>
+
+        <Footer>
+          <Flex
+            w={'100%'}
+          >
+            <Flex
+              direction={'column'}
+              justify={'flex-start'}
+              align={'flex-start'}
+            >
+              {Pages.map(link => (
+                <AlterLink
+                  key={link.title}
+                  fontSize={'lg'}
+                  mr={10}
+                  letterSpacing={0.5}
+                  href={link.path}>
+                    {link.title}
+                  </AlterLink>
+              ))}
+            </Flex>
+
+            <Flex
+              direction={'column'}
+              justify={'flex-start'}
+              align={'flex-start'}
+            >
+              {Social.map(link => (
+                <AlterLink
+                  key={link.title}
+                  fontSize={'lg'}
+                  href={link.path}>
+                    {link.title}
+                  </AlterLink>
+              ))}
+            </Flex>
+          </Flex>
+        </Footer>
       </Flex>
     </Flex>
   )
