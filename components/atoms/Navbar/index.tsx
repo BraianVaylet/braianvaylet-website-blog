@@ -7,7 +7,10 @@ interface NavbarTypes {
 
 const Navbar = ({ children }: NavbarTypes) => {
   return (
-    <Box py={10} px={30} background={'pink'} w='100%'>
+    <Box
+      p={5}
+      w='100%'
+    >
       {children}
     </Box>
   )

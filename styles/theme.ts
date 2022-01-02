@@ -1,10 +1,13 @@
-import { extendTheme } from '@chakra-ui/react'
+import { theme, extendTheme } from '@chakra-ui/react'
 
 const customTheme = extendTheme({
+  ...theme,
+  initialColorMode: 'light',
+  useSystemColorMode: true,
   styles: {
     global: (props: any) => ({
       'html, body': {
-        fontSize: 'sm',
+        fontSize: 'md',
         color: props.colorMode === 'dark' ? 'white' : 'gray.600',
         lineHeight: 'tall'
       },
