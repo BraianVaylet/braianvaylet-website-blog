@@ -4,6 +4,10 @@ export const Pages = [
     title: 'Home'
   },
   {
+    path: '/about',
+    title: 'About'
+  },
+  {
     path: '/blog',
     title: 'Blog'
   }

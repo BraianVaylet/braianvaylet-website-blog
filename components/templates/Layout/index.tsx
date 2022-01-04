@@ -29,9 +29,9 @@ const Layout = ({ children, head }: LayoutTypes) => {
       <Flex
         direction={'column'}
         align={'center'}
-        justify={'flex-start'}
+        justify={'space-between'}
         minH={'100vh'}
-        w={'50%'}
+        w={'35%'}
       >
         <Navbar>
           <Flex
@@ -72,7 +72,11 @@ const Layout = ({ children, head }: LayoutTypes) => {
 
         <Flex
           w={'100%'}
-          minH={'50vh'}
+          minH={'75vh'}
+          h={'100%'}
+          direction={'column'}
+          align={'center'}
+          justify={'flex-start'}
         >
           {children}
         </Flex>
