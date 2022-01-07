@@ -1,13 +1,14 @@
-import { Flex } from '@chakra-ui/react'
+import { Flex, FlexProps } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 
-interface CardTypes {
+interface CardTypes extends FlexProps {
   children: ReactNode
 }
 
-const Card = ({ children }: CardTypes) => {
+const Card = ({ children, ...props }: CardTypes) => {
   return (
     <Flex
+      {...props}
       w={'100%'}
       h={'100%'}
       align={'center'}
