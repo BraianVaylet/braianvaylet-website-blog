@@ -8,7 +8,7 @@ export const Pages = [
     title: 'About'
   },
   {
-    path: '/blog',
+    path: '/posts',
     title: 'Blog'
   }
 ]

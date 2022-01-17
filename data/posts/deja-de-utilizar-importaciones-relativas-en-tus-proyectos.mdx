@@ -1,0 +1,84 @@
+---
+title: 'Deja de utilizar importaciones relativas en tus proyectos de React'
+description: 'Vamos a ver las diferencias entre las importaciones relativas y absolutas y porque es recomendable usar estas últimas en tus proyectos de React.'
+category: 'react'
+date: '2021-08-16'
+tags: 
+  - "React"
+  - "Next"
+  - "JavaScript"
+  - "TypeScript"
+---
+
+De seguro te has encontrado alguna vez con un código de React, Next o cualquier otra librería o framework de JavaScript donde los componentes son importados de la siguiente manera:
+
+```javascript
+// Ejemplo
+import Button from "../../components/atoms/Button"
+```
+Esta forma de importar el componente recibe el nombre de **importación relativa** y suelen arrancar siempre con **./** o **../**
+
+Nota: Esto no aplica solo a la importación de componentes, sino también a cualquier funcionalidad o elemento que requiera un import en tu archivo y que se almacene en algún fichero de tu proyecto.
+
+Esta forma de importar los componentes está bien, así que si la utilizas a diario no debes preocuparte, pero para casos donde te encuentres con proyectos muy grandes puede que no sea la mejor opción, por lo que puedes utilizar las **importaciones absolutas**. 
+Observemos el siguiente ejemplo:
+
+```javascript
+// usando importación relativa
+import Button from "../../../../components/atoms/Button"
+// usando importación absoluta
+import Button from "components/atoms/Button"
+```
+
+Claramente podemos apreciar a la vista de que la importación absoluta es mucho más prolija, elegante y carece de la posibilidad de equivocarnos al tipear los **”.”** y las **”/”**.
+
+Ok, bien… Si tu pregunta es cómo puedes usar estas importaciones absolutas, no te preocupes ahora mismo lo explicamos
+
+La forma de utilizarlas es muy simple, para vamos a necesitar crear un fichero en nuestro proyecto llamado **jsconfig.json** o **tsconfig.json** si estamos usando **TypeScript**
+Dentro de este fichero vamos a escribir el siguiente **JSON**:
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  }
+}
+```
+
+Este código le dirá a Webpack que utilice el fichero **src** cómo directorio **base**. En caso de no tener este fichero podemos especificar otro, incluso en caso de tener los ficheros sueltos en la raíz del proyecto podemos dejarlo de la siguiente manera:
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "."
+  }
+}
+```
+
+De esta manera ya vamos a poder usar las importaciones absolutas en nuestros proyectos. Como dato extra podemos crear nuestros propios paths personalizados para utilizarlos luego en nuestros imports, para ello es necesario agregar la opción **paths** a nuestro JSON de configuración.
+Dentro de paths podremos definir nuestros paths personalizados, veamos el siguiente ejemplo para cerrar la idea:
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/components/*": ["components/*"],
+    }
+  }
+}
+
+```
+
+En este caso estamos modificando el path al directorio components para que al momento de hacer el import podamos acceder a él bajo el nuevo path @/components lo cual quedaria algo asi:
+
+```javascript
+import Button from "@/components/atoms/Button"
+```
+
+## Conclusión
+Siempre podemos usar las importaciones **relativas** así como las **absolutas**, en proyectos muy grandes se recomienda usar las importaciones absolutas para que el código sea **más simple, legible, prolijo y sea menos propenso a errores de tipado**.
+Lo único que necesitamos para utilizarlas es configurar nuestro archivo **jsconfig.json** o **tsconfig.json**.
+Así que espero que este post les haya sido de ayuda y muchas gracias por llegar hasta el final!
+
+ahora a codear 💙!

@@ -22,8 +22,6 @@ const Layout = ({ children, head }: LayoutTypes) => {
       align={'center'}
       justify={'flex-start'}
       minH={'100vh'}
-      minW={'100vw'}
-
     >
       {head}
       <Flex

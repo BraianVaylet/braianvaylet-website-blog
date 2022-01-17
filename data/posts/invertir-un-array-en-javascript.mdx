@@ -1,0 +1,133 @@
+---
+title: 'Cómo invertir un array en JavaScript conservando el array original'
+description: 'Vamos a ver diferentes formas de invertir un array en JavaScript pudiendo conservar el orden original del array de entrada.'
+category: 'javascript'
+date: '2021-08-16'
+tags: 
+  - "JavaScript"
+---
+
+Algo tan simple como la necesidad de invertir el orden de un array puede convertirse en un problema si eres nuevo en JavaScript. En realidad es bastante sencillo invertir el orden actual de los elementos de una matriz en JavaScript utilizando el método reverse. 
+Vamos a ello:
+
+```javascript
+const myArray = [1, 2, 3, 4, 5, 6]
+const newReversedArray = myArray.reverse()
+
+// Esperado: [6, 5, 4, 3, 2, 1]
+// Imprime: [6, 5, 4, 3, 2, 1] 😀
+console.log(newReversedArray)
+
+// Esperado: [1, 2, 3, 4, 5, 6]
+// Imprime: [6, 5, 4, 3, 2, 1] 😟
+console.log(myArray)
+```
+
+Ok, que sucedió… Obtuvimos el nuevo array **newReversedArray** con el orden invertido pero ahora nuestro array original **myArray** también se vio afectado por el método **reverse**.
+Lo que sucede aquí es que el método **reverse** muta el array original y solo devuelve una referencia a dicho array, por ese motivo es que perdemos el orden original del array.
+Ahora tenemos muchas formas de poder solucionar esto, así que veamos a continuación cada una de ellas:
+
+## Solución usando los métodos slice y reverse
+
+```javascript
+const myArray = [1, 2, 3, 4, 5, 6]
+const newReversedArray = myArray.slice().reverse()
+
+// Esperado: [6, 5, 4, 3, 2, 1]
+// Imprime: [6, 5, 4, 3, 2, 1] 😀
+console.log(newReversedArray)
+
+// Esperado: [1, 2, 3, 4, 5, 6]
+// Imprime: [1, 2, 3, 4, 5, 6] 😀
+console.log(myArray)
+```
+
+El método **reverse** es nativo de javascript, por lo cual es un método rápido lo cual lo vuelve la mejor opción por defecto. Lo único que necesitamos ajustar en nuestra lógica es que lo estamos aplicando al array original, cuando en realidad deberíamos estar aplicándolo sobre una copia del mismo. Una de las mejores formas de hacer una copia de un array es usando el método slice sin ningún argumento, esto nos devolverá una copia del array sobre el cual podremos trabajar sin alterar el original.
+
+## Solución usando el operador de propagación y el método reverse
+
+```javascript
+const myArray = [1, 2, 3, 4, 5, 6]
+const newReversedArray = [...myArray].reverse()
+
+// Esperado: [6, 5, 4, 3, 2, 1]
+// Imprime: [6, 5, 4, 3, 2, 1] 😀
+console.log(newReversedArray)
+
+// Esperado: [1, 2, 3, 4, 5, 6]
+// Imprime: [1, 2, 3, 4, 5, 6] 😀
+console.log(myArray)
+```
+
+De la misma forma que antes, creamos una copia de nuestro array a la cual luego aplicamos el método reverse. En este caso creamos la copia de nuestro array utilizando el operador de propagación para copiar todo el contenido de nuestro array en uno nuevo vacío, para luego poder invertir su orden.
+
+## Solución usando el método reduce
+
+```javascript
+const myArray = [1, 2, 3, 4, 5, 6]
+const newReversedArray = myArray.reduce((accumulator, value) => {
+  return [value, ...accumulator]
+}, [])
+
+// Esperado: [6, 5, 4, 3, 2, 1]
+// Imprime: [6, 5, 4, 3, 2, 1] 😀
+console.log(newReversedArray)
+
+// Esperado: [1, 2, 3, 4, 5, 6]
+// Imprime: [1, 2, 3, 4, 5, 6] 😀
+console.log(myArray)
+```
+
+Podemos obtener el mismo resultado utilizando el método reduce el cual también es nativo de JavaScript. Este enfoque puede que no sea tan intuitivo como los anteriores pero su funcionamiento es básicamente el siguiente: Declaramos una variable que almacenará el resultado del método reduce, el cual lo que hace es iterar sobre el array y agregar cada elemento al comienzo del acumulador, que para este caso será un array vacío.
+
+## Solución iterando hacia atrás sobre un array
+
+```javascript
+const myArray = [1, 2, 3, 4, 5, 6]
+let newReversedArray = []
+
+for (let i = myArray.length - 1; i >0 0; i--) {
+  newReversedArray.push(myArray[i])
+}
+
+// Esperado: [6, 5, 4, 3, 2, 1]
+// Imprime: [6, 5, 4, 3, 2, 1] 😀
+console.log(newReversedArray)
+
+// Esperado: [1, 2, 3, 4, 5, 6]
+// Imprime: [1, 2, 3, 4, 5, 6] 😀
+console.log(myArray)
+```
+
+Ok esta forma funciona pero como pueden ver no es tan elegante como las otras, es más larga y no es tan eficiente como las soluciones anteriores que ya hemos visto. Como pueden ver básicamente la idea es iterar nuestro array original hacia atrás y almacenar cada elemento en un nuevo array.
+
+Similar a esta lógica podríamos plantear la siguiente:
+
+```javascript
+const myArray = [1, 2, 3, 4, 5, 6]
+let newReversedArray = []
+
+for (let i = 0; i < myArray.length; i++) {
+  newReversedArray.unshift(myArray[i])
+}
+
+// Esperado: [6, 5, 4, 3, 2, 1]
+// Imprime: [6, 5, 4, 3, 2, 1] 😀
+console.log(newReversedArray)
+
+// Esperado: [1, 2, 3, 4, 5, 6]
+// Imprime: [1, 2, 3, 4, 5, 6] 😀
+console.log(myArray)
+```
+
+Básicamente es el mismo concepto, solo que iteramos progresivamente sobre el array original y agregamos cada elemento al comienzo del nuevo, de esta forma obtendremos uno nuevo con el orden invertido.
+Al igual que la anterior es larga, poco elegante y poco eficiente… Pero funciona…
+
+
+## Conclusión
+Como pueden ver existen varias formas de invertir un array sin perder el orden original del mismo, la idea es siempre tratar de utilizar los métodos nativos de javascript como lo son el reverse y el reduce, ya que son más eficientes y más elegantes al momento de escribir nuestro código. 
+Así que espero que este post les haya sido de ayuda y muchas gracias por llegar hasta el final!
+
+ahora a codear 💛!
+
+
