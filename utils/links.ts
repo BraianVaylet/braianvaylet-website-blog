@@ -21,9 +21,5 @@ export const Social = [
   {
     path: 'https://github.com/BraianVaylet',
     title: 'Github'
-  },
-  {
-    path: 'https://www.youtube.com/c/BraianVaylet',
-    title: 'Youtube'
   }
 ]

@@ -2,7 +2,6 @@ import { FlexProps } from '@chakra-ui/react'
 import NextHead from 'components/atoms/NextHead'
 import Layout from 'components/templates/Layout'
 import PostsList from 'components/templates/PostsList'
-
 import { getAllFilesMetadata } from 'lib/mdx'
 import { orderByDate } from 'lib/order-by-date'
 

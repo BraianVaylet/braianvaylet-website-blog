@@ -26,7 +26,7 @@
     "rehype": "^12.0.0",
     "remark-code-titles": "^0.1.2",
     "remark-parse": "^10.0.0",
-    "remark-slug": "^7.0.0"
+    "remark-slug": "^7.0.0"    
   },
   "devDependencies": {
     "@types/node": "17.0.6",
@@ -42,7 +42,8 @@
     "eslint-plugin-react": "^7.28.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.1.2",
-    "typescript": "4.5.4"
+    "typescript": "4.5.4",
+    "next-sitemap": "^1.6.160"
   },
   "lint-staged": {
     "**/*.{js, jsx, ts, tsx}": [
