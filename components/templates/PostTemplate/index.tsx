@@ -1,7 +1,10 @@
 import { Box, Flex } from '@chakra-ui/layout'
-import Post from 'components/organisms/Post'
+import Post, { PostTypes } from 'components/organisms/Post'
+import { ReactNode } from 'react'
 
-import { PostTemplateTypes } from './PostTemplateTypes'
+export interface PostTemplateTypes extends PostTypes {
+  children: ReactNode,
+}
 
 const PostTemplate = ({ children, ...props }: PostTemplateTypes | any) => {
   return (

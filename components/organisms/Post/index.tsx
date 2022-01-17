@@ -7,7 +7,7 @@ export interface PostTypes extends FlexProps{
   slug: string,
   title: string
   description: string,
-  readingTime: {
+  readingtime: {
     minutes: number,
     text: string,
     time: number,
@@ -15,7 +15,7 @@ export interface PostTypes extends FlexProps{
   }
 }
 
-const Post = ({ category, title, date, tags, readingTime, description, ...props }: PostTypes) => {
+const Post = ({ category, title, date, tags, readingtime, description, ...props }: PostTypes) => {
   return (
     <Flex
       direction={'row'}
