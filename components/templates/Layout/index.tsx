@@ -6,10 +6,7 @@ import Navbar from 'components/atoms/Navbar'
 import AlterLink from 'components/atoms/AlterLink'
 import SunIcon from 'components/atoms/Icons/SunIcon'
 import Footer from 'components/atoms/Footer'
-
 import { Pages, Social } from 'utils/links'
-import logo from 'public/images/logo.png'
-import CustomImage from 'components/atoms/Image/CustomImageBackground'
 
 interface LayoutTypes {
   children: ReactNode,
