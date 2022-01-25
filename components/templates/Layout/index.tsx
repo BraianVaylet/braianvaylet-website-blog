@@ -1,12 +1,10 @@
 import { ReactNode } from 'react'
-import { Flex, useColorMode } from '@chakra-ui/react'
-import IconButtonRotate from 'components/atoms/IconButtonRotate'
-import MoonIcon from 'components/atoms/Icons/MoonIcon'
+import { Button, Flex, Icon } from '@chakra-ui/react'
 import Navbar from 'components/atoms/Navbar'
 import AlterLink from 'components/atoms/AlterLink'
-import SunIcon from 'components/atoms/Icons/SunIcon'
 import Footer from 'components/atoms/Footer'
-import { Pages, Social } from 'utils/links'
+import { Pages, Social } from 'data'
+import IconTheme from 'components/molecules/IconTheme'
 
 interface LayoutTypes {
   children: ReactNode,
@@ -14,8 +12,6 @@ interface LayoutTypes {
 }
 
 const Layout = ({ children, head }: LayoutTypes) => {
-  const { colorMode, toggleColorMode } = useColorMode()
-
   return (
     <Flex
       direction={'column'}
@@ -41,30 +37,22 @@ const Layout = ({ children, head }: LayoutTypes) => {
               justify={'flex-start'}
               align={'center'}
             >
-              {[...Pages, ...Social].map(link => (
-                <AlterLink
+              {[...Pages, ...Social].map((link: {title: string, path: string, icon?: any}) => (
+                <Button
+                  variant={'outline'}
                   key={link.title}
+                  as={AlterLink}
+                  leftIcon={link.icon && <Icon as={link.icon} />}
                   mr={10}
                   fontSize={'lg'}
                   letterSpacing={0.5}
                   href={link.path}
                 >
                   {link.title}
-                </AlterLink>
+                </Button>
               ))}
             </Flex>
-            <IconButtonRotate
-              onClick={toggleColorMode}
-              icon={
-                colorMode === 'light'
-                  ? (
-                  <MoonIcon boxSize={7} />
-                    )
-                  : (
-                  <SunIcon boxSize={7} />
-                    )
-              }
-            />
+            <IconTheme variant={'outline'} />
           </Flex>
         </Navbar>
 

@@ -1,8 +1,9 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Flex, Text } from '@chakra-ui/react'
+import { ReactChild } from 'react'
 
 interface ItemsTypes {
   title: string,
-  content: string
+  content: ReactChild
 }
 
 interface AccordionListTypes {
@@ -34,7 +35,12 @@ const AccordionList = ({ items, withIndex = false }: AccordionListTypes) => (
             <AccordionIcon />
           </AccordionButton>
         </Text>
-        <AccordionPanel pb={4} dangerouslySetInnerHTML={{ __html: item.content }} />
+        <AccordionPanel
+          pb={4}
+          px={0}
+        >
+          {item.content}
+        </AccordionPanel>
       </AccordionItem>
     ))}
   </Accordion>

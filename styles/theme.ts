@@ -10,14 +10,14 @@ const customTheme = extendTheme({
         fontSize: 'md',
         color: props.colorMode === 'dark' ? 'white' : 'gray.600',
         lineHeight: 'tall'
-      },
-      a: {
-        color: props.colorMode === 'dark' ? 'teal.300' : 'teal.500'
       }
     })
   },
   colors: {
-    brand: {}
+    brand: {
+      primary: 'green.400',
+      secundary: 'blue.400'
+    }
   }
 })
 

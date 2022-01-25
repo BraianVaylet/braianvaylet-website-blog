@@ -8,9 +8,11 @@ interface FooterTypes {
 const Footer = ({ children }: FooterTypes) => {
   return (
     <Box
-      paddingY={10}
-      marginTop={10}
+      padding={5}
+      marginY={10}
       w='100%'
+      borderWidth={1}
+      borderRadius={10}
     >
       {children}
     </Box>
