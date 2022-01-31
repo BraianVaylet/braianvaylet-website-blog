@@ -9,7 +9,7 @@ interface NavbarTypes {
 
 const Navbar = ({ childrenWeb, childrenDrawer }: NavbarTypes) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = useRef()
+  const btnRef = useRef(null)
   const [isLargerBreakpoint, isDisplayingInBrowser] = useMediaQuery([
     '(min-width: 600px)',
     '(display-mode: browser)'
