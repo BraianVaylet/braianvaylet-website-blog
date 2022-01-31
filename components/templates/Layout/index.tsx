@@ -5,7 +5,6 @@ import AlterLink from 'components/atoms/AlterLink'
 import Footer from 'components/atoms/Footer'
 import { Pages, Social } from 'data'
 import IconTheme from 'components/molecules/IconTheme'
-
 interface LayoutTypes {
   children: ReactNode,
   head: ReactNode
@@ -25,17 +24,48 @@ const Layout = ({ children, head }: LayoutTypes) => {
         align={'center'}
         justify={'space-between'}
         minH={'100vh'}
-        w={'35%'}
+        width={{
+          base: '90%',
+          sm: '90%',
+          md: '80%',
+          lg: '60%',
+          xl: '40%'
+        }}
       >
-        <Navbar>
-          <Flex
-            justify={'space-between'}
-            align={'center'}
-            w={'100%'}
-          >
+        <Navbar
+          childrenWeb={(
             <Flex
-              justify={'flex-start'}
+              justify={'space-between'}
               align={'center'}
+              w={'100%'}
+            >
+              <Flex
+                justify={'flex-start'}
+                align={'center'}
+              >
+                {[...Pages, ...Social].map((link: {title: string, path: string, icon?: any}) => (
+                  <Button
+                    variant={'outline'}
+                    key={link.title}
+                    as={AlterLink}
+                    leftIcon={link.icon && <Icon as={link.icon} />}
+                    mr={10}
+                    fontSize={'lg'}
+                    letterSpacing={0.5}
+                    href={link.path}
+                  >
+                    {link.title}
+                  </Button>
+                ))}
+              </Flex>
+              <IconTheme variant={'outline'} />
+            </Flex>
+          )}
+          childrenDrawer={(
+            <Flex
+              direction={'column'}
+              justify={'flex-start'}
+              align={'flex-start'}
             >
               {[...Pages, ...Social].map((link: {title: string, path: string, icon?: any}) => (
                 <Button
@@ -43,7 +73,8 @@ const Layout = ({ children, head }: LayoutTypes) => {
                   key={link.title}
                   as={AlterLink}
                   leftIcon={link.icon && <Icon as={link.icon} />}
-                  mr={10}
+                  mb={10}
+                  w={'100%'}
                   fontSize={'lg'}
                   letterSpacing={0.5}
                   href={link.path}
@@ -51,10 +82,15 @@ const Layout = ({ children, head }: LayoutTypes) => {
                   {link.title}
                 </Button>
               ))}
+              <IconTheme
+                variant={'outline'}
+                mb={10}
+                w={'100%'}
+                fontSize={'lg'}
+              />
             </Flex>
-            <IconTheme variant={'outline'} />
-          </Flex>
-        </Navbar>
+          )}
+        />
 
         <Flex
           w={'100%'}

@@ -7,6 +7,7 @@ const customTheme = extendTheme({
   styles: {
     global: (props: any) => ({
       'html, body': {
+        width: '100%',
         fontSize: 'md',
         color: props.colorMode === 'dark' ? 'white' : 'gray.600',
         lineHeight: 'tall'

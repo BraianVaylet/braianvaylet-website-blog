@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Avatar, Flex, Text } from '@chakra-ui/react'
+import { Avatar, Flex, Text, useMediaQuery } from '@chakra-ui/react'
 import Layout from 'components/templates/Layout'
 import NextHead from 'components/atoms/NextHead'
 import Stepper from 'components/atoms/Stepper'
@@ -8,12 +8,14 @@ import ImgPerfil from 'public/images/perfil.jpg'
 import { dataSection2, dataSection3, dataSection4 } from 'data'
 
 const Home: NextPage = () => {
+  const [isLargerThan900] = useMediaQuery('min-width: 900px')
   return (
     <Layout
       head={<NextHead title={'BraianVaylet'} description={'website & blog'}/>}
     >
       {/* Section1: Presentation */}
       <Flex
+        direction={!isLargerThan900 ? 'row' : 'column-reverse'}
         justify={'space-between'}
         align={'center'}
         w={'100%'}
@@ -22,7 +24,7 @@ const Home: NextPage = () => {
           direction={'column'}
           align={'flex-start'}
           justify={'flex-start'}
-          w={'60%'}
+          w={isLargerThan900 ? '60%' : '100%'}
         >
           <Text
             as={'h1'}
@@ -50,9 +52,10 @@ const Home: NextPage = () => {
         </Flex>
         <Flex
           direction={'column'}
-          align={'flex-end'}
+          align={isLargerThan900 ? 'flex-end' : 'center'}
           justify={'center'}
-          w={'40%'}
+          mb={isLargerThan900 ? 0 : 10}
+          w={isLargerThan900 ? '40%' : '100%'}
         >
           <Avatar size={'2xl'} name={'Braian Vaylet'} src={ImgPerfil.src} />
         </Flex>
