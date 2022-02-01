@@ -4,6 +4,11 @@
 
 # 👋 Website & Blog
 
+### Esta es mi web personal donde podrán acceder a info sobre mi además de a mi blog, donde "espero" poder subir contenido todas las semanas... La aplicación está desarrollada con Next.js, TypeScript, ChakraUI, Markdown y siguiendo una arquitectura basada en el JamStack. En estos momentos se encuentra deployada en Vercel.
+
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
