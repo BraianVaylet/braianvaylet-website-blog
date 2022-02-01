@@ -10,7 +10,7 @@ interface linkTypes {
 }
 
 interface BodyProjectTypes {
-  image: {
+  image?: {
     src: string,
     alt: string
   },
@@ -21,52 +21,59 @@ interface BodyProjectTypes {
 const BodyProject = ({ image, content, links }: BodyProjectTypes) => {
   return (
     <Flex
-      align={'flex-start'}
-      justify={'space-between'}
-      direction={'row'}
+      direction={'column'}
+      align='center'
+      justify={'center'}
       w={'100%'}
     >
       <Flex
-        p={5}
-        w={'25%'}
-        align={'center'}
-        justify={'center'}
-        direction={'column'}
-      >
-        <CustomImage
-          src={image.src}
-          alt={image.alt}
-          w={'80%'}
-          h={'80%'}
-        />
-      </Flex>
-      <Flex
-        p={5}
-        w={'75%'}
-        direction={'column'}
         align={'flex-start'}
         justify={'space-between'}
+        direction={['column', 'column', 'row', 'row']}
+        w={'100%'}
       >
-        <Text w={'100%'}>
-          {content}
-        </Text>
-        <Flex
+        {image && <Flex
+          p={5}
+          w={['100%', '100%', '25%', '25%']}
           align={'center'}
-          justify={'flex-start'}
-          w={'100%'}
-          mt={5}
+          justify={'center'}
+          direction={'column'}
         >
-          {links.map((link: linkTypes) => (
-            <Button
-              key={link.url}
-              mr={5}
-              leftIcon={link.icon && <Icon as={link.icon} />}
-              as={AlterLink}
-              href={link.url}>
-                {link.name}
-            </Button>
-          ))}
+          <CustomImage
+            src={image.src}
+            alt={image.alt}
+            w={['30%', '30%', '80%', '80%']}
+            h={['30%', '30%', '80%', '80%']}
+          />
+        </Flex>}
+        <Flex
+          p={5}
+          w={['100%', '100%', image ? '75%' : '100%', image ? '75%' : '100%']}
+          direction={'column'}
+          align={'flex-start'}
+          justify={'space-between'}
+        >
+          <Text w={'100%'}>
+            {content}
+          </Text>
         </Flex>
+      </Flex>
+      <Flex
+        align={'center'}
+        justify={'flex-end'}
+        w={'100%'}
+        mt={5}
+      >
+        {links.map((link: linkTypes) => (
+          <Button
+            key={link.url}
+            mr={5}
+            leftIcon={link.icon && <Icon as={link.icon} />}
+            as={AlterLink}
+            href={link.url}>
+              {link.name}
+          </Button>
+        ))}
       </Flex>
     </Flex>
   )

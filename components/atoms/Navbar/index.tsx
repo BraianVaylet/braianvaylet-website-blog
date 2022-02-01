@@ -10,24 +10,23 @@ interface NavbarTypes {
 const Navbar = ({ childrenWeb, childrenDrawer }: NavbarTypes) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef(null)
-  const [isLargerBreakpoint, isDisplayingInBrowser] = useMediaQuery([
-    '(min-width: 600px)',
-    '(display-mode: browser)'
-  ])
-  console.log('isDisplayingInBrowser :>> ', isDisplayingInBrowser)
 
   return (
     <Box
       paddingY={[5, 5, 10, 10]}
       w={'100%'}
     >
-      {isDisplayingInBrowser || isLargerBreakpoint
-        ? childrenWeb
-        : (
+        <Box
+          display={['none', 'none', 'block', 'block']}
+          w={'100%'}
+        >
+          {childrenWeb}
+        </Box>
         <Flex
           align={'center'}
           justify={'flex-end'}
           w={'100%'}
+          display={['flex', 'flex', 'none', 'none']}
         >
           <Button
             ref={btnRef}
@@ -56,7 +55,6 @@ const Navbar = ({ childrenWeb, childrenDrawer }: NavbarTypes) => {
             </DrawerContent>
           </Drawer>
         </Flex>
-          )}
     </Box>
   )
 }

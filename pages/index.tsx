@@ -1,21 +1,20 @@
 import type { NextPage } from 'next'
-import { Avatar, Flex, Text, useMediaQuery } from '@chakra-ui/react'
+import { Avatar, Flex, Text } from '@chakra-ui/react'
 import Layout from 'components/templates/Layout'
 import NextHead from 'components/atoms/NextHead'
 import Stepper from 'components/atoms/Stepper'
 import AccordionList from 'components/molecules/AccordionList'
 import ImgPerfil from 'public/images/perfil.jpg'
-import { dataSection2, dataSection3, dataSection4 } from 'data'
+import { dataSection2, dataSection3, dataSection4, dataSection5 } from 'data'
 
 const Home: NextPage = () => {
-  const [isLargerThan900] = useMediaQuery('min-width: 900px')
   return (
     <Layout
       head={<NextHead title={'BraianVaylet'} description={'website & blog'}/>}
     >
       {/* Section1: Presentation */}
       <Flex
-        direction={!isLargerThan900 ? 'row' : 'column-reverse'}
+        direction={['column-reverse', 'column-reverse', 'row', 'row']}
         justify={'space-between'}
         align={'center'}
         w={'100%'}
@@ -24,7 +23,7 @@ const Home: NextPage = () => {
           direction={'column'}
           align={'flex-start'}
           justify={'flex-start'}
-          w={isLargerThan900 ? '60%' : '100%'}
+          w={['100%', '100%', '60%', '60%']}
         >
           <Text
             as={'h1'}
@@ -47,15 +46,15 @@ const Home: NextPage = () => {
           >
             Soy un desarrollador web localizado en la ciudad de Bahía Blanca, ARG.
             Ocupo el puesto de Web UI developer en <b>Globant</b> y de Tutor en los cursos de React de <b>Coderhouse</b>.
-            Actualmente me encuentro formandome como Blockchain developer.
+            Actualmente me encuentro formándome como Blockchain developer.
           </Text>
         </Flex>
         <Flex
           direction={'column'}
-          align={isLargerThan900 ? 'flex-end' : 'center'}
+          align={['center', 'center', 'flex-end', 'flex-end']}
           justify={'center'}
-          mb={isLargerThan900 ? 0 : 10}
-          w={isLargerThan900 ? '40%' : '100%'}
+          mb={[10, 10, 0, 0]}
+          w={['100%', '100%', '40%', '40%']}
         >
           <Avatar size={'2xl'} name={'Braian Vaylet'} src={ImgPerfil.src} />
         </Flex>
@@ -109,7 +108,7 @@ const Home: NextPage = () => {
           as='p'
           my={5}
         >
-          En los ultimos años pude trabajar y colaborar con gente de muchas empresas y en muchos proyectos tanto web como mobile, usando varias tecnologias y metodologias de trabajo.
+          En los últimos años pude trabajar y colaborar con gente de muchas empresas y en muchos proyectos tanto web como mobile, usando varias tecnologías y metodologías de trabajo.
         </Text>
         <AccordionList
           items={dataSection3}
@@ -130,16 +129,43 @@ const Home: NextPage = () => {
           fontSize={'3xl'}
           fontWeight={'bold'}
         >
-          Algunos Proyetos
+          Algunos Proyectos
         </Text>
         <Text
           as='p'
           my={5}
         >
-          Algunos de los proyectos personales en los que estoy trabajando, tambien pueden revisar mi cuenta de Github para ver otros...
+          Algunos de los proyectos personales en los que estoy trabajando, también pueden revisar mi cuenta de Github para ver otros...
         </Text>
         <AccordionList
           items={dataSection4}
+        />
+      </Flex>
+
+      <Stepper />
+
+      {/* Section5: Capacitaciones */}
+      <Flex
+        direction={'column'}
+        align={'flex-start'}
+        justify={'flex-start'}
+        w={'100%'}
+      >
+        <Text
+          as={'h3'}
+          fontSize={'3xl'}
+          fontWeight={'bold'}
+        >
+          Capacitaciones
+        </Text>
+        <Text
+          as='p'
+          my={5}
+        >
+          Como todo developer autodidacta estoy constantemente en modo estudio nivel Nerd. Actualmente me encuentro estudiando y perfeccionando en temáticas como desarrollo Web (front, back), desarrollo Blockchain (web3 y smart-contracts), liderazgo y habilidades blandas las cuales me ayudan en mis tareas diarias...
+        </Text>
+        <AccordionList
+          items={dataSection5}
         />
       </Flex>
     </Layout>
