@@ -1,10 +1,14 @@
 import { ReactNode } from 'react'
+
 import { Button, Flex, Icon } from '@chakra-ui/react'
 import Navbar from 'components/atoms/Navbar'
 import AlterLink from 'components/atoms/AlterLink'
 import Footer from 'components/atoms/Footer'
-import { Pages, Social } from 'data'
 import IconTheme from 'components/molecules/IconTheme'
+
+import { Pages } from 'data/content/pages'
+import { Social } from 'data/content/social'
+
 interface LayoutTypes {
   children: ReactNode,
   head: ReactNode

@@ -1,5 +1,6 @@
-import { Flex, Text } from '@chakra-ui/react'
+import { Flex, Text, useColorModeValue } from '@chakra-ui/react'
 import AlterLink from 'components/atoms/AlterLink'
+import RenderHTML from 'components/atoms/RenderHTML'
 
 interface BodyExperienceTypes {
   content: string,
@@ -7,6 +8,7 @@ interface BodyExperienceTypes {
 }
 
 const BodyExperience = ({ content, website }: BodyExperienceTypes) => {
+  const color = useColorModeValue('brand.secundary', 'brand.primary')
   return (
     <Flex
       direction={'column'}
@@ -14,14 +16,11 @@ const BodyExperience = ({ content, website }: BodyExperienceTypes) => {
       justify={'flex-start'}
       w={'100%'}
     >
-      <Text>
-        {content}
-      </Text>
+      <RenderHTML html={content} />
       <AlterLink
         mt={5}
-        bg={'brand.100'}
         href={website}
-        color={'green.400'}
+        color={color}
       >
         {website}
       </AlterLink>
