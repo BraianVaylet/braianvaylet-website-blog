@@ -1,4 +1,4 @@
-import { Flex, Text, useColorModeValue } from '@chakra-ui/react'
+import { Flex, useColorModeValue } from '@chakra-ui/react'
 import AlterLink from 'components/atoms/AlterLink'
 import RenderHTML from 'components/atoms/RenderHTML'
 
