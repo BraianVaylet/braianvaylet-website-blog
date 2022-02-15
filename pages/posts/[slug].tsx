@@ -39,7 +39,7 @@ const PostBySlug = ({ source, frontMatter }: PostBySlugTypes) => {
       <PostTemplate {...frontMatter}>
         <MDXRemote
           {...source}
-          components/={{ ...MDXcomponents/ }}
+          components={{ ...MDXcomponents }}
         />
       </PostTemplate>
   </Layout>
