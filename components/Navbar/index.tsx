@@ -1,4 +1,4 @@
-import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Icon, useDisclosure } from '@chakra-ui/react'
+import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Icon, Text, useDisclosure } from '@chakra-ui/react'
 import { ReactNode, useRef } from 'react'
 import { FaEllipsisH } from 'react-icons/fa'
 
@@ -24,10 +24,18 @@ const Navbar = ({ childrenWeb, childrenDrawer }: NavbarTypes) => {
         </Box>
         <Flex
           align={'center'}
-          justify={'flex-end'}
+          justify={'space-between'}
           w={'100%'}
           display={['flex', 'flex', 'none', 'none']}
         >
+          <Text
+            fontSize={'2xl'}
+            fontWeight={'extrabold'}
+            bgGradient={'linear(to-l, brand.primary, brand.secundary)'}
+            bgClip={'text'}
+          >
+            BDeV
+          </Text>
           <Button
             ref={btnRef}
             variant={'outline'}

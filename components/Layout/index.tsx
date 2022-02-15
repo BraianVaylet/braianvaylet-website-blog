@@ -5,9 +5,12 @@ import Navbar from 'components/Navbar'
 import AlterLink from 'components/AlterLink'
 import Footer from 'components/Footer'
 import IconTheme from 'components/IconTheme'
+import CustomImage from 'components/Image/CustomImage'
 
 import { Pages } from 'data/content/pages'
 import { Social } from 'data/content/social'
+
+import Logo from 'public/images/logo.png'
 
 interface LayoutTypes {
   children: ReactNode,
@@ -108,40 +111,47 @@ const Layout = ({ children, head }: LayoutTypes) => {
         </Flex>
 
         <Footer>
-          <Flex
-            w={'100%'}
-          >
+          <Flex>
             <Flex
-              direction={'column'}
-              justify={'flex-start'}
-              align={'flex-start'}
+              w={'100%'}
             >
-              {Pages.map(link => (
-                <AlterLink
-                  key={link.title}
-                  fontSize={'lg'}
-                  mr={10}
-                  letterSpacing={0.5}
-                  href={link.path}>
-                    {link.title}
-                  </AlterLink>
-              ))}
+              <Flex
+                direction={'column'}
+                justify={'flex-start'}
+                align={'flex-start'}
+              >
+                {Pages.map(link => (
+                  <AlterLink
+                    key={link.title}
+                    fontSize={'lg'}
+                    mr={10}
+                    letterSpacing={0.5}
+                    href={link.path}>
+                      {link.title}
+                    </AlterLink>
+                ))}
+              </Flex>
+
+              <Flex
+                direction={'column'}
+                justify={'flex-start'}
+                align={'flex-start'}
+              >
+                {Social.map(link => (
+                  <AlterLink
+                    key={link.title}
+                    fontSize={'lg'}
+                    href={link.path}>
+                      {link.title}
+                    </AlterLink>
+                ))}
+              </Flex>
             </Flex>
 
-            <Flex
-              direction={'column'}
-              justify={'flex-start'}
-              align={'flex-start'}
-            >
-              {Social.map(link => (
-                <AlterLink
-                  key={link.title}
-                  fontSize={'lg'}
-                  href={link.path}>
-                    {link.title}
-                  </AlterLink>
-              ))}
+            <Flex>
+              <CustomImage src={Logo.src} w={10} h={10} alt={'logo BDeV'} />
             </Flex>
+
           </Flex>
         </Footer>
       </Flex>

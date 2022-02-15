@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           <Text fontSize={'xl'}>{section1.title}</Text>
           <Text
             as={'h1'}
-            fontSize={'6xl'}
+            fontSize={['3xl', '5xl', '5xl', '5xl']}
             fontWeight={'extrabold'}
             bgGradient={'linear(to-l, brand.primary, brand.secundary)'}
             bgClip={'text'}
