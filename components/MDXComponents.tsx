@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import { Image, Divider, Heading, HeadingProps, TextProps, Code, ListIcon, ListItem, OrderedList, Table, Tbody, Td, Text, Th, Thead, Tr, UnorderedList, TableProps, TableHeadProps, TableBodyProps, ListItemProps } from '@chakra-ui/react'
-import AlterLink from 'components/atoms/AlterLink'
-import PostTemplate from 'components/templates/PostTemplate'
+import AlterLink from 'components/AlterLink'
+import PostTemplate from 'components/PostTemplate'
 
 const MDXComponents = {
   a: AlterLink,

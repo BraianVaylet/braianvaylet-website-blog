@@ -1,6 +1,6 @@
 import { Flex, Text, Button, Icon } from '@chakra-ui/react'
-import AlterLink from 'components/atoms/AlterLink'
-import CustomImage from 'components/atoms/Image/CustomImage'
+import AlterLink from 'components/AlterLink'
+import CustomImage from 'components/Image/CustomImage'
 import { ReactNode } from 'react'
 
 interface linkTypes {

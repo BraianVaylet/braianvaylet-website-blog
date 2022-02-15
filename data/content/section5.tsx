@@ -1,4 +1,4 @@
-import BodyProject from 'components/molecules/BodyProject'
+import BodyProject from 'components/BodyProject'
 
 const title = 'Capacitaciones'
 

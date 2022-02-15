@@ -14,7 +14,7 @@ De seguro te has encontrado alguna vez con un código de React, Next o cualquier
 
 ```javascript
 // Ejemplo
-import Button from "../../components/atoms/Button"
+import Button from "../../componentsButton"
 ```
 Esta forma de importar el componente recibe el nombre de **importación relativa** y suelen arrancar siempre con **./** o **../**
 
@@ -25,9 +25,9 @@ Observemos el siguiente ejemplo:
 
 ```javascript
 // usando importación relativa
-import Button from "../../../../components/atoms/Button"
+import Button from "../../../../componentsButton"
 // usando importación absoluta
-import Button from "components/atoms/Button"
+import Button from "componentsButton"
 ```
 
 Claramente podemos apreciar a la vista de que la importación absoluta es mucho más prolija, elegante y carece de la posibilidad de equivocarnos al tipear los **”.”** y las **”/”**.
@@ -73,7 +73,7 @@ Dentro de paths podremos definir nuestros paths personalizados, veamos el siguie
 En este caso estamos modificando el path al directorio components para que al momento de hacer el import podamos acceder a él bajo el nuevo path @/components lo cual quedaria algo asi:
 
 ```javascript
-import Button from "@/components/atoms/Button"
+import Button from "@/componentsButton"
 ```
 
 ## Conclusión

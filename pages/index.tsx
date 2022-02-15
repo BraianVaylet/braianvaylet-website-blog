@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 
 import { Avatar, Flex, Text } from '@chakra-ui/react'
-import Layout from 'components/templates/Layout'
-import NextHead from 'components/atoms/NextHead'
-import Stepper from 'components/atoms/Stepper'
-import AccordionList from 'components/molecules/AccordionList'
-import RenderHTML from 'components/atoms/RenderHTML'
+import Layout from 'components/Layout'
+import NextHead from 'components/NextHead'
+import Stepper from 'components/Stepper'
+import AccordionList from 'components/AccordionList'
+import RenderHTML from 'components/RenderHTML'
 
 import ImgPerfil from 'public/images/perfil.jpg'
 
@@ -36,8 +36,10 @@ const Home: NextPage = () => {
           <Text fontSize={'xl'}>{section1.title}</Text>
           <Text
             as={'h1'}
-            fontSize={'5xl'}
-            fontWeight={'bold'}
+            fontSize={'6xl'}
+            fontWeight={'extrabold'}
+            bgGradient={'linear(to-l, brand.primary, brand.secundary)'}
+            bgClip={'text'}
           >
             Braian D. Vaylet
           </Text>
@@ -96,6 +98,7 @@ const Home: NextPage = () => {
         <AccordionList
           items={section2.content}
           withIndex
+          withContent={false}
         />
       </Flex>
 

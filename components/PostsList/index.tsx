@@ -1,6 +1,6 @@
 import { Flex } from '@chakra-ui/layout'
-import AlterLink from 'components/atoms/AlterLink'
-import Post, { PostTypes } from 'components/organisms/Post'
+import AlterLink from 'components/AlterLink'
+import Post, { PostTypes } from 'components/Post'
 
 export interface PostsListTypes {
   posts: PostTypes[] | any,

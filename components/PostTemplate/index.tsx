@@ -1,5 +1,5 @@
 import { Box, Flex } from '@chakra-ui/layout'
-import Post, { PostTypes } from 'components/organisms/Post'
+import Post, { PostTypes } from 'components/Post'
 import { ReactNode } from 'react'
 
 export interface PostTemplateTypes extends PostTypes {

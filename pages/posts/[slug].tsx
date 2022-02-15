@@ -3,10 +3,10 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { FlexProps } from '@chakra-ui/react'
 import { MDXRemote } from 'next-mdx-remote'
 import { getFileBySlug, getFiles } from 'lib/mdx'
-import MDXComponents from 'components/MDXComponents'
-import Layout from 'components/templates/Layout'
-import PostTemplate from 'components/templates/PostTemplate'
-import NextHead from 'components/atoms/NextHead'
+import MDXcomponents from 'components/MDXComponents'
+import Layout from 'components/Layout'
+import PostTemplate from 'components/PostTemplate'
+import NextHead from 'components/NextHead'
 
 export interface PostTypes extends FlexProps {
   category: string,
@@ -39,7 +39,7 @@ const PostBySlug = ({ source, frontMatter }: PostBySlugTypes) => {
       <PostTemplate {...frontMatter}>
         <MDXRemote
           {...source}
-          components={{ ...MDXComponents }}
+          components/={{ ...MDXcomponents/ }}
         />
       </PostTemplate>
   </Layout>

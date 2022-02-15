@@ -1,5 +1,5 @@
 import { FaEthereum, FaGithub } from 'react-icons/fa'
-import BodyProject from 'components/molecules/BodyProject'
+import BodyProject from 'components/BodyProject'
 
 const title = 'Algunos Proyectos'
 

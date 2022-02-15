@@ -1,10 +1,10 @@
 import { ReactNode } from 'react'
 
 import { Button, Flex, Icon } from '@chakra-ui/react'
-import Navbar from 'components/atoms/Navbar'
-import AlterLink from 'components/atoms/AlterLink'
-import Footer from 'components/atoms/Footer'
-import IconTheme from 'components/molecules/IconTheme'
+import Navbar from 'components/Navbar'
+import AlterLink from 'components/AlterLink'
+import Footer from 'components/Footer'
+import IconTheme from 'components/IconTheme'
 
 import { Pages } from 'data/content/pages'
 import { Social } from 'data/content/social'

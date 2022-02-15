@@ -9,9 +9,10 @@ interface ItemsTypes {
 interface AccordionListTypes {
   items: ItemsTypes[],
   withIndex?: boolean,
+  withContent?: boolean
 }
 
-const AccordionList = ({ items, withIndex = false }: AccordionListTypes) => (
+const AccordionList = ({ items, withIndex = false, withContent = true }: AccordionListTypes) => (
   <Accordion
     allowToggle
     w={'100%'}
@@ -21,7 +22,7 @@ const AccordionList = ({ items, withIndex = false }: AccordionListTypes) => (
         key={item.title}
         w={'100%'}
       >
-        <Text as={'h2'}>
+        <Text>
           <AccordionButton px={0}>
             <Box
               flex='1'
@@ -32,15 +33,17 @@ const AccordionList = ({ items, withIndex = false }: AccordionListTypes) => (
                 <Text>{item.title}</Text>
               </Flex>
             </Box>
-            <AccordionIcon />
+            {withContent && <AccordionIcon />}
           </AccordionButton>
         </Text>
-        <AccordionPanel
-          pb={4}
-          px={0}
-        >
-          {item.content}
-        </AccordionPanel>
+        {withContent && (
+          <AccordionPanel
+            pb={4}
+            px={0}
+          >
+            {item.content}
+          </AccordionPanel>
+        )}
       </AccordionItem>
     ))}
   </Accordion>
