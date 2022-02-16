@@ -115,6 +115,34 @@ const content = [
         ]}
       />
     )
+  },
+  {
+    title: '🧙‍♂️ Epic Game',
+    content: (
+      <BodyProject
+        image={{
+          src: 'https://raw.githubusercontent.com/BraianVaylet/buildspace-epic-game-ui/main/public/wizard.png',
+          alt: 'logo Epic Game'
+        }}
+        content={'🧙‍♂️ Epic Game, es un juego NFT que te permitirá conectar tu billetera y acuñar un NFT como personaje, que luego podrás usar en el juego donde el objetivo es derrotar al jefe del contrato.'}
+        links={[
+          {
+            url: 'https://buildspace-epic-game-ui.vercel.app/',
+            name: 'Web'
+          },
+          {
+            url: 'https://rinkeby.etherscan.io/address/0x6b741cf326784c304fb47fef4248e3b7e9d161d2',
+            name: 'Contrato',
+            icon: FaEthereum
+          },
+          {
+            url: 'https://github.com/BraianVaylet/buildspace-epic-game-ui',
+            name: 'Github',
+            icon: FaGithub
+          }
+        ]}
+      />
+    )
   }
 ]
 
