@@ -64,7 +64,7 @@ const BodyProject = ({ image, content, links }: BodyProjectPropsTypes) => {
         w={'100%'}
         mt={5}
       >
-        {links.map((link: linkTypes) => (
+        {links.map((link: linkPropsTypes) => (
           <Button
             key={link.url}
             mr={5}
