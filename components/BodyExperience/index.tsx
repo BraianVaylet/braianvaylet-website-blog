@@ -2,12 +2,12 @@ import { Flex, useColorModeValue } from '@chakra-ui/react'
 import AlterLink from 'components/AlterLink'
 import RenderHTML from 'components/RenderHTML'
 
-interface BodyExperienceTypes {
+interface BodyExperiencePropsTypes {
   content: string,
   website?: string
 }
 
-const BodyExperience = ({ content, website }: BodyExperienceTypes) => {
+const BodyExperience = ({ content, website }: BodyExperiencePropsTypes) => {
   const color = useColorModeValue('brand.secundary', 'brand.primary')
   return (
     <Flex

@@ -1,16 +1,16 @@
 import { Flex } from '@chakra-ui/layout'
 import AlterLink from 'components/AlterLink'
-import Post, { PostTypes } from 'components/Post'
+import Post, { PostPropsTypes } from 'components/Post'
 
-export interface PostsListTypes {
-  posts: PostTypes[] | any,
+export interface PostsListPropsTypes {
+  posts: PostPropsTypes[] | any,
   path: string
 }
 
-const PostsList = ({ posts, path }: PostsListTypes) => {
+const PostsList = ({ posts, path }: PostsListPropsTypes) => {
   return (
     posts
-      ? posts.map((post: PostTypes) => {
+      ? posts.map((post: PostPropsTypes) => {
         return (
           <AlterLink
             key={post.slug}

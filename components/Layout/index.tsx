@@ -10,14 +10,14 @@ import CustomImage from 'components/Image/CustomImage'
 import { Pages } from 'data/content/pages'
 import { Social } from 'data/content/social'
 
-import Logo from 'public/images/logo.png'
+import { Logo } from 'utils/images'
 
-interface LayoutTypes {
+interface LayoutPropsTypes {
   children: ReactNode,
   head: ReactNode
 }
 
-const Layout = ({ children, head }: LayoutTypes) => {
+const Layout = ({ children, head }: LayoutPropsTypes) => {
   return (
     <Flex
       direction={'column'}

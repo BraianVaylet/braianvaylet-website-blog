@@ -1,10 +1,10 @@
 import { Text, TextProps } from '@chakra-ui/react'
 
-interface RenderHtmlTypes extends TextProps {
+interface RenderHtmlPropsTypes extends TextProps {
   html: string
 }
 
-const RenderHTML = ({ html, ...props }: RenderHtmlTypes) => (
+const RenderHTML = ({ html, ...props }: RenderHtmlPropsTypes) => (
   <Text
     {...props}
     dangerouslySetInnerHTML={{ __html: html }}

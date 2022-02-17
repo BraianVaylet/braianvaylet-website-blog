@@ -2,16 +2,16 @@ import { ReactNode } from 'react'
 import NextLink from 'next/link'
 import { Link, LinkProps } from '@chakra-ui/react'
 
-interface AlterLinkTypes extends LinkProps {
+interface AlterLinkPropsTypes extends LinkProps {
   href: string,
   children: ReactNode | string,
 }
 
-interface LinkUITypes extends LinkProps {
+interface LinkUIPropsTypes extends LinkProps {
   children: ReactNode
 }
 
-const LinkUI = ({ children, ...props }: LinkUITypes) => {
+const LinkUI = ({ children, ...props }: LinkUIPropsTypes) => {
   return (
     <Link
       as='a'
@@ -25,7 +25,7 @@ const LinkUI = ({ children, ...props }: LinkUITypes) => {
   )
 }
 
-const AlterLink = ({ href, children, ...props }: AlterLinkTypes) => {
+const AlterLink = ({ href, children, ...props }: AlterLinkPropsTypes) => {
   const isExternalLink = !href.startsWith('/' || '#')
   if (isExternalLink) {
     return <LinkUI href={href} isExternal {...props}>{children}</LinkUI>

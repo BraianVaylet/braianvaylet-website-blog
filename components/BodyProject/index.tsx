@@ -3,22 +3,22 @@ import AlterLink from 'components/AlterLink'
 import CustomImage from 'components/Image/CustomImage'
 import { ReactNode } from 'react'
 
-interface linkTypes {
+interface linkPropsTypes {
   name: ReactNode,
   url: string,
   icon?: any
 }
 
-interface BodyProjectTypes {
+interface BodyProjectPropsTypes {
   image?: {
     src: string,
     alt: string
   },
   content: string,
-  links: linkTypes[]
+  links: linkPropsTypes[]
 }
 
-const BodyProject = ({ image, content, links }: BodyProjectTypes) => {
+const BodyProject = ({ image, content, links }: BodyProjectPropsTypes) => {
   return (
     <Flex
       direction={'column'}

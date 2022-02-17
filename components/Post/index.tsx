@@ -1,6 +1,6 @@
 import { Flex, Text, FlexProps } from '@chakra-ui/react'
 
-export interface PostTypes extends FlexProps{
+export interface PostPropsTypes extends FlexProps{
   category: string,
   tags: string[],
   date: string,
@@ -15,7 +15,15 @@ export interface PostTypes extends FlexProps{
   }
 }
 
-const Post = ({ category, title, date, tags, readingtime, description, ...props }: PostTypes) => {
+const Post = ({
+  category,
+  title,
+  date,
+  tags,
+  readingtime,
+  description,
+  ...props
+}: PostPropsTypes) => {
   return (
     <Flex
       direction={'row'}

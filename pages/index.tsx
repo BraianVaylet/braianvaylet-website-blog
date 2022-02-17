@@ -7,7 +7,7 @@ import Stepper from 'components/Stepper'
 import AccordionList from 'components/AccordionList'
 import RenderHTML from 'components/RenderHTML'
 
-import ImgPerfil from 'public/images/perfil.jpg'
+import { Perfil } from 'utils/images'
 
 import section1 from 'data/content/section1'
 import section2 from 'data/content/section2'
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
           <Avatar
             size={'2xl'}
             name={'Braian Vaylet'}
-            src={ImgPerfil.src}
+            src={Perfil.src}
             loading={'lazy'}
           />
         </Flex>

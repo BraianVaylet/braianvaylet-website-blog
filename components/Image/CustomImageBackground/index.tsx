@@ -1,6 +1,6 @@
 import { Box, BoxProps } from '@chakra-ui/react'
 
-export interface CustomImageBackgroundTypes extends BoxProps {
+export interface CustomImageBackgroundPropsTypes extends BoxProps {
   src: string,
   alt: string
 }
@@ -9,7 +9,7 @@ const CustomImage = ({
   src,
   alt,
   ...props
-}: CustomImageBackgroundTypes) => (
+}: CustomImageBackgroundPropsTypes) => (
   <Box
     {...props}
     bgImage={`url(${src})`}

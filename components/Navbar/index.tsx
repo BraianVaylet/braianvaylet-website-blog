@@ -2,12 +2,12 @@ import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, Draw
 import { ReactNode, useRef } from 'react'
 import { FaEllipsisH } from 'react-icons/fa'
 
-interface NavbarTypes {
+interface NavbarPropsTypes {
   childrenWeb: ReactNode,
   childrenDrawer: ReactNode,
 }
 
-const Navbar = ({ childrenWeb, childrenDrawer }: NavbarTypes) => {
+const Navbar = ({ childrenWeb, childrenDrawer }: NavbarPropsTypes) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef(null)
 

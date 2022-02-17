@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 import { Box } from '@chakra-ui/react'
 
-interface FooterTypes {
+interface FooterPropsTypes {
   children: ReactNode
 }
 
-const Footer = ({ children }: FooterTypes) => {
+const Footer = ({ children }: FooterPropsTypes) => {
   return (
     <Box
       padding={5}

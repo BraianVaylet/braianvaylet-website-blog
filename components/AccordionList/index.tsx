@@ -1,23 +1,23 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Flex, Text } from '@chakra-ui/react'
 import { ReactChild } from 'react'
 
-interface ItemsTypes {
+interface ItemsPropsTypes {
   title: string,
   content: ReactChild
 }
 
-interface AccordionListTypes {
-  items: ItemsTypes[],
+interface AccordionListPropsTypes {
+  items: ItemsPropsTypes[],
   withIndex?: boolean,
   withContent?: boolean
 }
 
-const AccordionList = ({ items, withIndex = false, withContent = true }: AccordionListTypes) => (
+const AccordionList = ({ items, withIndex = false, withContent = true }: AccordionListPropsTypes) => (
   <Accordion
     allowToggle
     w={'100%'}
   >
-    {items && items.map((item: ItemsTypes, index: number) => (
+    {items && items.map((item: ItemsPropsTypes, index: number) => (
       <AccordionItem
         key={item.title}
         w={'100%'}

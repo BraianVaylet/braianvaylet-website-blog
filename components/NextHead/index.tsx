@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { ReactChild } from 'react'
 
-interface NextHeadTypes {
+interface NextHeadPropsTypes {
   title: string,
   description: string,
   children?: ReactChild
@@ -11,7 +11,7 @@ const NextHead = ({
   title,
   description,
   children
-}: NextHeadTypes) => (
+}: NextHeadPropsTypes) => (
   <Head>
     <title>{title}</title>
     <meta name="description" content={description} />
