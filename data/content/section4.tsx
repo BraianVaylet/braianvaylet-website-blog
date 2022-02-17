@@ -143,6 +143,29 @@ const content = [
         ]}
       />
     )
+  },
+  {
+    title: '🐗 Boar Design System',
+    content: (
+      <BodyProject
+        image={{
+          src: 'https://raw.githubusercontent.com/BraianVaylet/butterfly-design-system/main/public/boar2.png',
+          alt: 'logo Boar Design System'
+        }}
+        content={'🐗 Boar Design System, es un Design System de componentes en React.'}
+        links={[
+          {
+            url: 'https://boar-design-system.vercel.app/',
+            name: 'Storybook'
+          },
+          {
+            url: 'https://github.com/BraianVaylet/boar-design-system',
+            name: 'Github',
+            icon: FaGithub
+          }
+        ]}
+      />
+    )
   }
 ]
 
