@@ -36,7 +36,10 @@ export const getAllFilesMetadata = (type: string) => {
     const mdxSource = fs.readFileSync(path.join(root, 'data', type, postSlug), 'utf-8')
     const { data } = matter(mdxSource)
     return [
-      { ...data, slug: postSlug.replace('.mdx', '') },
+      {
+        ...data,
+        slug: postSlug.replace('.mdx', '')
+      },
       ...allPosts
     ]
   }, [])

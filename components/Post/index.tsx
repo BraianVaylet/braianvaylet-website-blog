@@ -1,4 +1,4 @@
-import { Flex, Text, FlexProps } from '@chakra-ui/react'
+import { Flex, Text, FlexProps, Badge } from '@chakra-ui/react'
 
 export interface PostPropsTypes extends FlexProps{
   category: string,
@@ -7,7 +7,8 @@ export interface PostPropsTypes extends FlexProps{
   slug: string,
   title: string
   description: string,
-  readingtime: {
+  showDescription?: boolean
+  readingTime: {
     minutes: number,
     text: string,
     time: number,
@@ -20,8 +21,9 @@ const Post = ({
   title,
   date,
   tags,
-  readingtime,
+  readingTime,
   description,
+  showDescription = true,
   ...props
 }: PostPropsTypes) => {
   return (
@@ -45,24 +47,40 @@ const Post = ({
           flexWrap={'wrap'}
         >
           <Text
-            fontSize={'1.2rem'}
+            fontSize={['2xl', '2xl', '3xl', '3xl']}
             fontWeight={'bold'}
             mb={3}
           >
             {title}
           </Text>
-          <Text>
-            {description}
-          </Text>
+          <Flex
+            align={'flex-start'}
+            justify={'flex-start'}
+            direction={'column'}
+            w={'100%'}
+          >
+            <Text mb={2}>
+              {showDescription && description}
+            </Text>
+            {category && (
+              <Badge
+                variant='outline'
+                colorScheme={'teal'}
+              >
+                {category}
+              </Badge>
+            )}
+          </Flex>
           <Text
             as={Flex}
-            justify={'flex-end'}
+            justify={'flex-start'}
             w={'100%'}
-            fontSize={'xs'}
+            fontSize={'md'}
+            fontStyle={'italic'}
             color={'gray.300'}
             mt={3}
           >
-            {date}
+            {readingTime && Math.round(readingTime.minutes) + ' minutos de lectura - '}{date}
           </Text>
         </Flex>
       </Flex>

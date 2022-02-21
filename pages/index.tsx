@@ -19,7 +19,12 @@ import section6 from 'data/content/trainings'
 const Home: NextPage = () => {
   return (
     <Layout
-      head={<NextHead title={'BraianVaylet'} description={'website & blog'} />}
+      head={
+        <NextHead
+          title={'Braian Vaylet - Home'}
+          description={'Web personal'}
+        />
+      }
     >
       {/* Section1: Presentation */}
       <Flex
@@ -99,7 +104,6 @@ const Home: NextPage = () => {
         </Text>
         <AccordionList
           items={section2.content}
-          withIndex
           withContent={false}
         />
       </Flex>

@@ -28,7 +28,7 @@ export const Sections = [
   },
   {
     path: '#section5',
-    title: 'skills'
+    title: 'Skills'
   },
   {
     path: '#section6',

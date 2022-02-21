@@ -12,7 +12,7 @@ export interface PostTypes extends FlexProps {
   slug: string,
   title: string
   description: string,
-  readingtime: {
+  readingTime: {
     minutes: number,
     text: string,
     time: number,
@@ -26,12 +26,16 @@ export interface PostsPageTypes {
 
 export default function Post ({ posts }: PostsPageTypes) {
   return (
-    <Layout head={
-      <NextHead title={'BraianVaylet'} description={'website & blog'}/>
-    }>
+    <Layout
+      head={
+        <NextHead
+          title={'Braian Vaylet - Blog'}
+          description={'Blog personal sobre desarrollo web y blockchain'}
+        />
+      }
+    >
       <PostsList posts={posts} path={'posts'} />
     </Layout>
-
   )
 }
 

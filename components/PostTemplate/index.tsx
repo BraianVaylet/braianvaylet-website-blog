@@ -8,10 +8,30 @@ export interface PostTemplatePropsTypes extends PostPropsTypes {
 
 const PostTemplate = ({ children, ...props }: PostTemplatePropsTypes | any) => {
   return (
-    <Flex direction='column' align='flex-start' justify='flex-start' w='100%' {...props}>
-      <Flex p='10px' direction='column' align='flex-start' justify='flex-start' w='100%' {...props}>
+    <Flex
+      direction='column'
+      align='flex-start'
+      justify='flex-start'
+      w='100%'
+      {...props}
+    >
+      <Flex
+        p='10px'
+        direction='column'
+        align='flex-start'
+        justify='flex-start'
+        w='100%'
+      >
         <Flex align='center' justify='space-between' w='100%'>
-          <Post {...props} bg='transparent' />
+          <Post
+            bg='transparent'
+            showDescription={false}
+            padding={5}
+            w='100%'
+            borderWidth={1}
+            borderRadius={10}
+            {...props}
+          />
         </Flex>
         <Box w='100%'>{children}</Box>
       </Flex>

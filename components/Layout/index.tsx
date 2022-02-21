@@ -7,7 +7,7 @@ import Footer from 'components/Footer'
 import IconTheme from 'components/IconTheme'
 import CustomImage from 'components/Image/CustomImage'
 
-import { Pages, Sections } from 'data/routes'
+import { Pages, Sections } from 'utils/routes'
 import { Social } from 'data/content/social'
 
 import { Logo } from 'utils/images'
