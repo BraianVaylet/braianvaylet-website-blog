@@ -78,6 +78,7 @@ const Home: NextPage = () => {
 
       {/* Section2: Que estoy haciendo */}
       <Flex
+        id={'section2'}
         direction={'column'}
         align={'flex-start'}
         justify={'flex-start'}
@@ -107,6 +108,7 @@ const Home: NextPage = () => {
 
       {/* Section3: Experiencia */}
       <Flex
+        id={'section3'}
         direction={'column'}
         align={'flex-start'}
         justify={'flex-start'}
@@ -134,6 +136,7 @@ const Home: NextPage = () => {
 
       {/* Section4: Proyectos */}
       <Flex
+        id={'section4'}
         direction={'column'}
         align={'flex-start'}
         justify={'flex-start'}
@@ -161,6 +164,7 @@ const Home: NextPage = () => {
 
       {/* Section5: skills */}
       <Flex
+        id={'section5'}
         direction={'column'}
         align={'flex-start'}
         justify={'flex-start'}
@@ -186,22 +190,28 @@ const Home: NextPage = () => {
           justify={'flex-start'}
           wrap={'wrap'}
         >
-          {section5.content && section5.content.map((item: ({name: string, color: string})) => (
-            <Badge
-              key={item.name}
-              variant='outline'
-              colorScheme={item.color}
-            >
-              {item.name}
-            </Badge>
-          ))}
+          {section5.content && section5.content.map((skill: string) => {
+            const colorSchemeArr = ['gray', 'red', 'orange', 'yellow', 'green', 'teal', 'blue', 'cyan', 'purple', 'pink']
+            const rand = Math.random() * colorSchemeArr.length | 0
+            const color = colorSchemeArr[rand]
+            return (
+              <Badge
+                key={skill}
+                variant='outline'
+                colorScheme={color}
+              >
+                {skill}
+              </Badge>
+            )
+          })}
         </Flex>
       </Flex>
 
       <Stepper />
 
-      {/* Section5: Capacitaciones */}
+      {/* Section6: Capacitaciones */}
       <Flex
+        id={'section6'}
         direction={'column'}
         align={'flex-start'}
         justify={'flex-start'}

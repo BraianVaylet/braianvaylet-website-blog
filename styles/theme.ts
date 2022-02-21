@@ -10,7 +10,8 @@ const customTheme = extendTheme({
         width: '100%',
         fontSize: 'md',
         color: props.colorMode === 'dark' ? 'gray.300' : 'gray.600',
-        lineHeight: 'tall'
+        lineHeight: 'tall',
+        scrollBehavior: 'smooth'
       }
     })
   },

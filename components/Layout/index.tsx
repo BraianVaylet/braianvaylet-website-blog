@@ -7,7 +7,7 @@ import Footer from 'components/Footer'
 import IconTheme from 'components/IconTheme'
 import CustomImage from 'components/Image/CustomImage'
 
-import { Pages } from 'data/content/pages'
+import { Pages, Sections } from 'data/routes'
 import { Social } from 'data/content/social'
 
 import { Logo } from 'utils/images'
@@ -111,14 +111,20 @@ const Layout = ({ children, head }: LayoutPropsTypes) => {
         </Flex>
 
         <Footer>
-          <Flex>
+          <Flex
+            align={'flex-start'}
+            justify={'space-between'}
+            w={'100%'}
+          >
             <Flex
               w={'100%'}
+              wrap={'wrap'}
             >
               <Flex
                 direction={'column'}
                 justify={'flex-start'}
                 align={'flex-start'}
+                mb={5}
               >
                 {Pages.map(link => (
                   <AlterLink
@@ -136,11 +142,30 @@ const Layout = ({ children, head }: LayoutPropsTypes) => {
                 direction={'column'}
                 justify={'flex-start'}
                 align={'flex-start'}
+                mb={5}
               >
                 {Social.map(link => (
                   <AlterLink
                     key={link.title}
                     fontSize={'lg'}
+                    mr={10}
+                    href={link.path}>
+                      {link.title}
+                    </AlterLink>
+                ))}
+              </Flex>
+
+              <Flex
+                direction={'column'}
+                justify={'flex-start'}
+                align={'flex-start'}
+                mb={5}
+              >
+                {Sections.map(link => (
+                  <AlterLink
+                    key={link.title}
+                    fontSize={'lg'}
+                    mr={10}
                     href={link.path}>
                       {link.title}
                     </AlterLink>
@@ -151,7 +176,6 @@ const Layout = ({ children, head }: LayoutPropsTypes) => {
             <Flex>
               <CustomImage src={Logo.src} w={10} h={10} alt={'logo BDeV'} />
             </Flex>
-
           </Flex>
         </Footer>
       </Flex>

@@ -26,7 +26,7 @@ const LinkUI = ({ children, ...props }: LinkUIPropsTypes) => {
 }
 
 const AlterLink = ({ href, children, ...props }: AlterLinkPropsTypes) => {
-  const isExternalLink = !href.startsWith('/' || '#')
+  const isExternalLink = !((href.startsWith('/') || href.startsWith('#')))
   if (isExternalLink) {
     return <LinkUI href={href} isExternal {...props}>{children}</LinkUI>
   }
