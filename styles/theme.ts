@@ -16,8 +16,8 @@ const customTheme = extendTheme({
   },
   colors: {
     brand: {
-      primary: '#4FD1C5',
-      secundary: '#805AD5'
+      primary: '#66FFC4',
+      secondary: '#B33BF9'
     }
   }
 })

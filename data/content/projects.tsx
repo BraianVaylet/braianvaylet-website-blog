@@ -1,7 +1,7 @@
 import { FaEthereum, FaGithub } from 'react-icons/fa'
 import BodyProject from 'components/BodyProject'
 
-const title = 'Algunos Proyectos'
+const title = 'Proyectos'
 
 const introduction = `
   Algunos de los proyectos personales en los que estoy trabajando, normalmente no suelo disponer de mucho tiempo
@@ -66,7 +66,7 @@ const content = [
       <BodyProject
         image={{
           src: 'https://raw.githubusercontent.com/BraianVaylet/buildspace-wave-portal-ui/main/public/horn.png',
-          alt: 'logo Wabe Portal'
+          alt: 'logo Wave Portal'
         }}
         content={'🦄 Wave Portal, es un proyecto donde podrás ver y enviar un mensaje anónimo y ser recompensado con ETH. Para ello necesitas conectarte con Metamask a la testnet de Rinkeby y tener ETH para utilizar.'}
         links={[

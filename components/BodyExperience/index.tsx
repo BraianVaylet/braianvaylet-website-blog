@@ -8,7 +8,7 @@ interface BodyExperiencePropsTypes {
 }
 
 const BodyExperience = ({ content, website }: BodyExperiencePropsTypes) => {
-  const color = useColorModeValue('brand.secundary', 'brand.primary')
+  const color = useColorModeValue('brand.secondary', 'brand.primary')
   return (
     <Flex
       direction={'column'}

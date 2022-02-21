@@ -1,6 +1,8 @@
-import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Icon, Text, useDisclosure } from '@chakra-ui/react'
 import { ReactNode, useRef } from 'react'
+import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Icon, useDisclosure } from '@chakra-ui/react'
+import CustomImage from 'components/Image/CustomImage'
 import { FaEllipsisH } from 'react-icons/fa'
+import { Logo } from 'utils/images'
 
 interface NavbarPropsTypes {
   childrenWeb: ReactNode,
@@ -28,14 +30,7 @@ const Navbar = ({ childrenWeb, childrenDrawer }: NavbarPropsTypes) => {
           w={'100%'}
           display={['flex', 'flex', 'none', 'none']}
         >
-          <Text
-            fontSize={'2xl'}
-            fontWeight={'extrabold'}
-            bgGradient={'linear(to-l, brand.primary, brand.secundary)'}
-            bgClip={'text'}
-          >
-            BDeV
-          </Text>
+          <CustomImage src={Logo.src} boxSize={10} alt={'logo Braian Vaylet'} />
           <Button
             ref={btnRef}
             variant={'outline'}

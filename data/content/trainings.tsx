@@ -49,7 +49,7 @@ const content = [
     title: 'Coderhouse & Tutor School',
     content: (
       <BodyProject
-        content={'Realice un curso de React.js y luego tras tomar el rol de Tutor comence con las capacitaciones sobre tutorías'}
+        content={'Realice un curso de React.js y luego tras tomar el rol de Tutor comencé con las capacitaciones sobre tutorías'}
         links={[
           {
             url: 'https://www.coderhouse.com/',
@@ -121,7 +121,7 @@ const content = [
     title: 'Globant University',
     content: (
       <BodyProject
-        content={'Cursos y capacitaciones de la universidad Globant y la plataforma Acamica'}
+        content={'Cursos y capacitaciones de la universidad Globant y la plataforma Acámica'}
         links={[
           {
             url: 'https://university.globant.com/',
