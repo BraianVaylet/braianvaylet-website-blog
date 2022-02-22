@@ -20,7 +20,7 @@ const content = [
           <br/>
           En Febrero del 2021 me uní a la cuenta de Telecom ARG para formar parte del proyecto de Transformación IT, dentro de la 
           Tribu de Canales Digitales. El objetivo inicial del proyecto era la mejora tecnológica de todos los canales digitales
-          de la empresa, así como de la implementación de la nueva unificación marcaria que la empresa tenía como objetivo 
+          de la empresa, así como de la implementación de la nueva unificación marcária que la empresa tenía como objetivo 
           implementar ese mismo año.
           <br/>
           Ingrese como desarrollador FrontEnd para el Pod Tierra Media y luego tome también el rol de referente FrontEnd 
@@ -28,7 +28,7 @@ const content = [
           <br/>
           En este proyecto desarrollamos una arquitectura basada en Next.js y AEM implementando Micro-FrontEnd y ampliando
           su funcionalidad con el desarrollo de un Design System propio basado en Stencil.js y del uso de un BFF implementado en
-          Strapi. Es un proyecto en constante desarrollo donde todos los dias buscamos implementar nuevas mejoras 
+          Strapi. Es un proyecto en constante desarrollo donde todos los días buscamos implementar nuevas mejoras 
           y tecnologías para obtener la mejor performance y velocidad de desarrollo.
         `}
         website={'https://www.telecom.com.ar/'}
@@ -124,10 +124,10 @@ const content = [
           <br/>
           A mediados de Marzo del 2018 me inicie en el mundo IT trabajando como desarrollador FullStack para la empresa NexoSmart.
           NexoSmart es una pequeña PyMES de Bahía Blanca que funciona principalmente como una Software Factory. Durante los 2 años
-          que trabajé en ella me desarrollé como FullStack developer, aunque tambien tuve que cubrir varios roles como los de Technical Leader, 
+          que trabajé en ella me desarrollé como FullStack developer, aunque también tuve que cubrir varios roles como los de Technical Leader, 
           Project Manager, Technical Recruiter, Organizador de eventos y conferencias de tecnología, tareas administrativas como cobros, pagos
           y algunos roles más que no vale la pena mencionar...
-          Durante mi paso por NexoSmart trabaje en más de 60 proyectos web y móviles, el stack que utilizabamos se limitaba a jquery y PHP. 
+          Durante mi paso por NexoSmart trabaje en más de 60 proyectos web y móviles, el stack que utilizábamos se limitaba a jquery y PHP. 
         `}
         website={'https://www.nexosmart.com.ar/'}
       />

@@ -44,7 +44,7 @@ const content = [
   'AEM',
   'Strapi',
   'metodologías ágiles',
-  'srum',
+  'scrum',
   'etc...'
 ]
 
