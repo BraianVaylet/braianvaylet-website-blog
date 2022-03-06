@@ -1,25 +1,26 @@
 import { Flex, FlexProps } from '@chakra-ui/react'
 import { ReactNode } from 'react'
+import styles from './Card.styles.module.css'
 
 interface CardPropsTypes extends FlexProps {
-  children: ReactNode
+  children: ReactNode,
+  borderGradient: boolean
 }
 
-const Card = ({ children, ...props }: CardPropsTypes) => {
+const CardGradient = ({ children, borderGradient = false, ...props }: CardPropsTypes) => {
   return (
     <Flex
-      {...props}
       w={'100%'}
       h={'100%'}
       align={'center'}
       justify={'center'}
-      borderWidth={5}
-      borderRadius={5}
-      borderColor={'pink'}
+      p={5}
+      className={borderGradient ? styles['card__border-gradient'] : ''}
+      {...props}
     >
       {children}
     </Flex>
   )
 }
 
-export default Card
+export default CardGradient

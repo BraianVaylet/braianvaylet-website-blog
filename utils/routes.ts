@@ -15,23 +15,23 @@ export const Pages = [
 
 export const Sections = [
   {
-    path: '#section2',
+    path: '/#section2',
     title: 'Que estoy haciendo'
   },
   {
-    path: '#section3',
+    path: '/#section3',
     title: 'Experiencia'
   },
   {
-    path: '#section4',
+    path: '/#section4',
     title: 'Proyectos'
   },
   {
-    path: '#section5',
+    path: '/#section5',
     title: 'Skills'
   },
   {
-    path: '#section6',
+    path: '/#section6',
     title: 'Capacitaciones'
   }
 ]

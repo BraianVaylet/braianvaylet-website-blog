@@ -6,6 +6,7 @@ import NextHead from 'components/NextHead'
 import Stepper from 'components/Stepper'
 import AccordionList from 'components/AccordionList'
 import RenderHTML from 'components/RenderHTML'
+import Card from 'components/Card'
 
 import { Perfil } from 'utils/images'
 
@@ -102,10 +103,31 @@ const Home: NextPage = () => {
         >
           {section2.introduction}
         </Text>
-        <AccordionList
+        {/* <AccordionList
           items={section2.content}
           withContent={false}
-        />
+        /> */}
+        <Flex
+          align={'center'}
+          justify={'space-between'}
+          direction={'row'}
+          flexWrap={'wrap'}
+          w={'100%'}
+        >
+          {section2.content.map((item: any, idx: number) => (
+            <Card
+              key={item.title}
+              borderGradient={true}
+              w={['100%', '100%', '45%', '45%']}
+              h={20}
+              my={2}
+              mr={(idx % 2 === 0) ? [0, 0, '5%', '5%'] : 0}
+              textAlign={'center'}
+            >
+              {item.title}
+            </Card>
+          ))}
+        </Flex>
       </Flex>
 
       <Stepper />
