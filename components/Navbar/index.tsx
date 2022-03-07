@@ -1,8 +1,10 @@
 import { ReactNode, useRef } from 'react'
-import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Icon, useDisclosure } from '@chakra-ui/react'
+import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Icon, useColorMode, useDisclosure } from '@chakra-ui/react'
 import CustomImage from 'components/Image/CustomImage'
 import { FaEllipsisH } from 'react-icons/fa'
 import { Logo } from 'utils/images'
+import { addOpacityToColor } from 'styles/utils'
+import styles from './Navbar.styles.module.css'
 
 interface NavbarPropsTypes {
   childrenWeb: ReactNode,
@@ -12,6 +14,7 @@ interface NavbarPropsTypes {
 const Navbar = ({ childrenWeb, childrenDrawer }: NavbarPropsTypes) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef(null)
+  const { colorMode } = useColorMode()
 
   return (
     <Box
@@ -48,8 +51,13 @@ const Navbar = ({ childrenWeb, childrenDrawer }: NavbarPropsTypes) => {
             onClose={onClose}
             finalFocusRef={btnRef}
           >
-            <DrawerOverlay />
-            <DrawerContent>
+            <DrawerOverlay
+              bg={addOpacityToColor({ color: colorMode === 'dark' ? 'black' : 'white', opacity: 1000 })}
+              className={styles.NavBar_DrawerContent__box}
+            />
+            <DrawerContent
+              bg={colorMode === 'dark' ? 'black' : 'white'}
+            >
               <DrawerCloseButton />
               <DrawerHeader>👋 Hola!</DrawerHeader>
               <DrawerBody>
