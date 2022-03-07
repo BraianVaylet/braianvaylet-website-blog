@@ -1,0 +1,102 @@
+---
+title: '10 convenciones de nomenclaturas en JavaScript'
+description: ''
+category: 'javascript'
+date: '2022-03-07'
+tags: 
+  - "JavaScript"
+---
+
+Cuando trabajamos con JavaScript pude ser muy ventajoso seguir algunas convenciones de nomenclaturas estandar que nos ayude a mejorar la legilibilidad asi como la comprension del codigo. Esta practica nos ayuda mucho a la hora de escribir y compartir nuestro codigo con otros desarrolladores.
+
+Actualmente muchos desarrolladores no saben como utilizar correctamente las convenciones de nomenclatura y sulen complicar las cosas.
+
+Por esta razon voy a resumir 10 de las mejores practica que para mi criterio todos los desarrolladores deberiamos seguir y respetar...
+
+## 1. Convenciones para VARIABLES.
+
+Como de seguro ya saben JavaScript puede distinguir entre Mayusculas y Minusculas a la hora de escribir el nombre de nuestras variables. Esto significa que para el lenguaje las minusculas como las mayusculas son consideradas diferentes, por lo que nos permitiria definir por lo menos cuatro variables unicas para almacenar un valor, vemos un ejemplo:
+
+```JavaScript
+
+let catName = 'Pimienta'
+let CatName = 'Luna'
+let catname = 'Pixie'
+let CATNAME = 'Levi'
+
+console.log('catName:', catName) // 👉 "catName:" 'Pimienta'
+console.log('CatName:', CatName) // 👉 "CatName:" 'Luna'
+console.log('catname:', catname) // 👉 "catname:" 'Pixie'
+console.log('CATNAME:', CATNAME) // 👉 "CATNAME:" 'Levi'
+
+```
+Wouuu, verdad? incluso podriamos separar palabras usando **"_"** y tener aun mas opciones.
+
+```JavaScript
+let cat_name = 'Melon'
+
+console.log('cat_name:', cat_name) // 👉 "cat_name:" 'Melon'
+```
+Sin embargo hay una forma que suele recomendarse a la hora de definir variables en JavaScript y es solo con nombre de variables en **mayusculas** y **minusculas**. Una buena practica es hacer uso de la escritura camel o tambien llamada **camelCase**, la cual implica comenzar siempre la primera palabra con minuscula y el resto con mayuscula. Por ejemplo:
+
+```javascript
+let catName = 'Pimienta' // ✅
+let CatName = 'Luna'     // ❌
+let catname = 'Pixie'    // ❌
+let CATNAME = 'Levi'     // ❌
+let cat_name = 'Melon'   // ❌
+```
+
+Otro detalle importante a la hora de nombrar una variable es SIEMPRE usar nombre representativos, el nombre de la variable debe poder explicar facilmente lo que almacena sin necesidad de tener que adivinar. Sigamos el ejemplo de almacenar el nombre del mishie en una variable:
+
+```javascript
+let n = 'Felipe'          // ❌ n?
+let name = 'Lolu'         // ❌ de quien es el nombre?
+let catName = 'Pimienta'  // ✅ Perfecto!
+```
+
+## 2. Convenciones para VARIABLES BOOLEANAS.
+
+Una buena practica cuando trabajamos con variables booleanas (true/false) es hacer uso de los prefijos **is** o **has**, veamos el siguiente ejemplo para entenderlo mejor.
+
+Si necesitaramos almacenar en una variable booleana si el gato tiene dueño, deberiamos nombrarla como **hasOwner**.
+
+```javascript
+let owner = true // ❌ dueño de que?
+let hasOwner = true // ✅ Perfecto!
+```
+
+## 3. Convenciones para nombre de CONSTANTES.
+
+Las constantes son variables que no cambian en el timepo. Al ser variables son sensibles a las mayusculas y minusculas. De todos modos existe una convencion que muchos desarrolladores siguen la cual consiste en nombrarlas siempre en mayuscula, de esa forma podemos visualizar facilmente si se trata de una constante o no.
+
+Al igual que antes el nombre de la constante debe ser descriptivo y llegado de que el nombre involucre a mas de una palabra puede usarse "_" para separar. 
+
+Esta forma de escritura recibe el nombre de **UPPER_SNAKE_CASE**. Veamos los ejemplos:
+
+```javascript
+const URL = 'https://www.algo.com'
+const NUMBER_LEGS = 4
+```
+
+EXTRA, todas las constantes deben declararse siempre al comienzo del archivo, metodo o clase.
+
+## 4. Convenciones para nombre de FUNCIONES.
+
+En los nombre de las funciones pasa lo mismo que con las variables, JavaScript distingue entre mayusculas y minusculas. Por lo tanto al igual que con las variables se aconseja usar camelCase para declarar nombres de funciones. De esta forma continuamos replicando la misma convencion en todo nuestro codigo.
+
+Por otro lado, ademas se recomienda hacer uso de sustantivos y verbos que sean descriptivos como prefijos en los nombres de nuestras funciones. El principio es igual al de las variables, cada nombre de funcion debe poder describir lo que hace. Veamos algunos ejemplos:
+
+```javascript
+// ❌ nombre de que?
+function name(catName) {
+  return `${catName} the cat.`
+}
+
+// ✅ Perfecto!
+function getName(catName) {
+  return `${catName} the cat.`
+}
+
+```
+
