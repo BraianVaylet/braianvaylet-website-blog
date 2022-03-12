@@ -145,6 +145,44 @@ const content = [
     )
   },
   {
+    title: '🌮 TacoDAO',
+    content: (
+      <BodyProject
+        image={{
+          src: 'https://raw.githubusercontent.com/BraianVaylet/buildspace-taco-dao-ui/main/public/taco.png',
+          alt: 'logo TacoDAO'
+        }}
+        content={'🌮 TacoDAO, es una DAO desarrollada para decidir sobre los tacos.'}
+        links={[
+          {
+            url: 'https://buildspace-taco-dao-ui.vercel.app/',
+            name: 'Web'
+          },
+          {
+            url: 'https://rinkeby.etherscan.io/address/0x156a40C0913854645026be920dB7950bab1aA11C',
+            name: 'Membership',
+            icon: FaEthereum
+          },
+          {
+            url: 'https://rinkeby.etherscan.io/address/0xE190FEAf3c8585ED0a33207535FeEFc62aadb285',
+            name: 'Governance Token',
+            icon: FaEthereum
+          },
+          {
+            url: 'https://rinkeby.etherscan.io/address/0xA1010FAdf1B4a9Dea19C2cdab235109EA5a2546B',
+            name: 'Voting',
+            icon: FaEthereum
+          },
+          {
+            url: 'https://github.com/BraianVaylet/buildspace-taco-dao-ui',
+            name: 'Github',
+            icon: FaGithub
+          }
+        ]}
+      />
+    )
+  },
+  {
     title: '🐗 Boar Design System',
     content: (
       <BodyProject

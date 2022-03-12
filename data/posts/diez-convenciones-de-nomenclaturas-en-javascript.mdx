@@ -66,7 +66,7 @@ let owner = true // ❌ dueño de que?
 let hasOwner = true // ✅ Perfecto!
 ```
 
-## 3. Convenciones para nombre de CONSTANTES.
+## 3. Convenciones para CONSTANTES.
 
 Las constantes son variables que no cambian en el timepo. Al ser variables son sensibles a las mayusculas y minusculas. De todos modos existe una convencion que muchos desarrolladores siguen la cual consiste en nombrarlas siempre en mayuscula, de esa forma podemos visualizar facilmente si se trata de una constante o no.
 
@@ -81,7 +81,7 @@ const NUMBER_LEGS = 4
 
 EXTRA, todas las constantes deben declararse siempre al comienzo del archivo, metodo o clase.
 
-## 4. Convenciones para nombre de FUNCIONES.
+## 4. Convenciones para FUNCIONES.
 
 En los nombre de las funciones pasa lo mismo que con las variables, JavaScript distingue entre mayusculas y minusculas. Por lo tanto al igual que con las variables se aconseja usar camelCase para declarar nombres de funciones. De esta forma continuamos replicando la misma convencion en todo nuestro codigo.
 
@@ -97,6 +97,24 @@ function name(catName) {
 function getName(catName) {
   return `${catName} the cat.`
 }
-
 ```
 
+## 5. Convenciones para CLASES.
+
+A la hora de trabajar con clases en JavaScript las convenciones son bastante similares a las que usamos con las funciones. Siempre debemos utilizar nombres de clases que sean descriptivos y que facilmente expliquen las capacidades que tiene esa clase.
+
+La unica diferencia que vamos a señalar es que para el caso de las clases vamos a hacer uso de la escritura pascal o **PascalCase** o **UpperCamelCase**, que es bastante similar a la de camelCase solo que esta siempre inicia en mayuscula.
+
+```javascript
+class CatNumberOne { 
+  constructor(catName, ownerName, catColor) { 
+    this.catName = catName; 
+    this.ownerName = ownerName; 
+    this.catColor = catColor; 
+  }
+}
+
+var catOne = new CatNumberOne('Pimienta', 'Braian', 'Gray');
+```
+
+## 6. Convenciones para COMPONENTES.
