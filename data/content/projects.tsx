@@ -49,7 +49,7 @@ const content = [
         links={[
           {
             url: 'https://citrix-coderhouse-store.vercel.app/',
-            name: 'Webs'
+            name: 'Web'
           },
           {
             url: 'https://github.com/BraianVaylet/citrix-coderhouse-curso-react-tienda',
