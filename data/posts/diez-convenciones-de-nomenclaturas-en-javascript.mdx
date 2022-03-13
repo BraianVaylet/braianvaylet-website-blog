@@ -7,15 +7,15 @@ tags:
   - "JavaScript"
 ---
 
-Cuando trabajamos con JavaScript pude ser muy ventajoso seguir algunas convenciones de nomenclaturas estandar que nos ayude a mejorar la legilibilidad asi como la comprension del codigo. Esta practica nos ayuda mucho a la hora de escribir y compartir nuestro codigo con otros desarrolladores.
+Cuando trabajamos con JavaScript puede ser muy ventajoso seguir algunas convenciones de nomenclaturas estándar que nos ayuden a mejorar la legibilidad así como la comprensión de nuestro código. Esta práctica nos ayuda mucho a la hora de escribir y compartir nuestro código con otros desarrolladores.
 
-Actualmente muchos desarrolladores no saben como utilizar correctamente las convenciones de nomenclatura y sulen complicar las cosas.
+Actualmente muchos desarrolladores no saben cómo utilizar correctamente las convenciones de nomenclatura y suelen complicar las cosas.
 
-Por esta razon voy a resumir 10 de las mejores practica que para mi criterio todos los desarrolladores deberiamos seguir y respetar...
+Por esta razón voy a resumir **10 de las mejores práctica** que para mi criterio todos los desarrolladores deberíamos seguir y respetar...
 
 ## 1. Convenciones para VARIABLES.
 
-Como de seguro ya saben JavaScript puede distinguir entre Mayusculas y Minusculas a la hora de escribir el nombre de nuestras variables. Esto significa que para el lenguaje las minusculas como las mayusculas son consideradas diferentes, por lo que nos permitiria definir por lo menos cuatro variables unicas para almacenar un valor, vemos un ejemplo:
+Como de seguro ya saben JavaScript puede distinguir entre mayúsculas y minúsculas a la hora de escribir el nombre de nuestras variables. Esto significa que para el lenguaje las minúsculas como las mayúsculas son consideradas diferentes, por lo que nos permitirá definir por lo menos cuatro variables únicas para almacenar un valor, vemos un ejemplo:
 
 ```JavaScript
 
@@ -30,14 +30,14 @@ console.log('catname:', catname) // 👉 "catname:" 'Pixie'
 console.log('CATNAME:', CATNAME) // 👉 "CATNAME:" 'Levi'
 
 ```
-Wouuu, verdad? incluso podriamos separar palabras usando **"_"** y tener aun mas opciones.
+Wouuu, verdad? incluso podríamos separar palabras usando **"_"** y tener aún más opciones.
 
 ```JavaScript
 let cat_name = 'Melon'
 
 console.log('cat_name:', cat_name) // 👉 "cat_name:" 'Melon'
 ```
-Sin embargo hay una forma que suele recomendarse a la hora de definir variables en JavaScript y es solo con nombre de variables en **mayusculas** y **minusculas**. Una buena practica es hacer uso de la escritura camel o tambien llamada **camelCase**, la cual implica comenzar siempre la primera palabra con minuscula y el resto con mayuscula. Por ejemplo:
+Sin embargo hay una forma que suele recomendarse a la hora de definir variables en JavaScript y es solo con nombre de variables en mayúsculas y minúsculas. Una buena práctica es hacer uso de la escritura camel o también llamada **camelCase**, la cual implica comenzar siempre la primera palabra con minúscula y el resto con minúscula. Por ejemplo:
 
 ```javascript
 let catName = 'Pimienta' // ✅
@@ -47,7 +47,7 @@ let CATNAME = 'Levi'     // ❌
 let cat_name = 'Melon'   // ❌
 ```
 
-Otro detalle importante a la hora de nombrar una variable es SIEMPRE usar nombre representativos, el nombre de la variable debe poder explicar facilmente lo que almacena sin necesidad de tener que adivinar. Sigamos el ejemplo de almacenar el nombre del mishie en una variable:
+Otro detalle importante a la hora de nombrar una variable es SIEMPRE usar nombre representativos, el nombre de la variable debe poder explicar fácilmente lo que almacena sin necesidad de tener que adivinar. Sigamos el ejemplo de almacenar el nombre del mishie en una variable:
 
 ```javascript
 let n = 'Felipe'          // ❌ n?
@@ -57,9 +57,9 @@ let catName = 'Pimienta'  // ✅ Perfecto!
 
 ## 2. Convenciones para VARIABLES BOOLEANAS.
 
-Una buena practica cuando trabajamos con variables booleanas (true/false) es hacer uso de los prefijos **is** o **has**, veamos el siguiente ejemplo para entenderlo mejor.
+Una buena práctica cuando trabajamos con variables booleanas (true/false) es hacer uso de los prefijos **is** o **has**, veamos el siguiente ejemplo para entenderlo mejor.
 
-Si necesitaramos almacenar en una variable booleana si el gato tiene dueño, deberiamos nombrarla como **hasOwner**.
+Si necesitamos almacenar en una variable booleana si el gato tiene dueño, deberíamos nombrarla como **hasOwner**.
 
 ```javascript
 let owner = true // ❌ dueño de que?
@@ -68,9 +68,9 @@ let hasOwner = true // ✅ Perfecto!
 
 ## 3. Convenciones para CONSTANTES.
 
-Las constantes son variables que no cambian en el timepo. Al ser variables son sensibles a las mayusculas y minusculas. De todos modos existe una convencion que muchos desarrolladores siguen la cual consiste en nombrarlas siempre en mayuscula, de esa forma podemos visualizar facilmente si se trata de una constante o no.
+Las constantes son variables que no cambian en el tiempo. Al ser variables son sensibles a las mayúsculas y minúsculas. De todos modos existe una convención que muchos desarrolladores siguen la cual consiste en nombrarlas siempre en mayúscula, de esa forma podemos visualizar fácilmente si se trata de una constante o no.
 
-Al igual que antes el nombre de la constante debe ser descriptivo y llegado de que el nombre involucre a mas de una palabra puede usarse "_" para separar. 
+Al igual que antes el nombre de la constante debe ser descriptivo y llegado de que el nombre involucre a más de una palabra puede usarse "_" para separar. 
 
 Esta forma de escritura recibe el nombre de **UPPER_SNAKE_CASE**. Veamos los ejemplos:
 
@@ -79,13 +79,13 @@ const URL = 'https://www.algo.com'
 const NUMBER_LEGS = 4
 ```
 
-EXTRA, todas las constantes deben declararse siempre al comienzo del archivo, metodo o clase.
+EXTRA, todas las constantes deben declararse siempre al comienzo del archivo, método o clase.
 
 ## 4. Convenciones para FUNCIONES.
 
-En los nombre de las funciones pasa lo mismo que con las variables, JavaScript distingue entre mayusculas y minusculas. Por lo tanto al igual que con las variables se aconseja usar camelCase para declarar nombres de funciones. De esta forma continuamos replicando la misma convencion en todo nuestro codigo.
+En los nombres de las funciones pasa lo mismo que con las variables, JavaScript distingue entre mayúsculas y minúsculas. Por lo tanto al igual que con las variables se aconseja usar camelCase para declarar nombres de funciones. De esta forma continuamos replicando la misma convención en todo nuestro código.
 
-Por otro lado, ademas se recomienda hacer uso de sustantivos y verbos que sean descriptivos como prefijos en los nombres de nuestras funciones. El principio es igual al de las variables, cada nombre de funcion debe poder describir lo que hace. Veamos algunos ejemplos:
+Por otro lado, además se recomienda hacer uso de sustantivos y verbos que sean descriptivos como prefijos en los nombres de nuestras funciones. El principio es igual al de las variables, cada nombre de función debe poder describir lo que hace. Veamos algunos ejemplos:
 
 ```javascript
 // ❌ nombre de que?
@@ -101,9 +101,9 @@ function getName(catName) {
 
 ## 5. Convenciones para CLASES.
 
-A la hora de trabajar con clases en JavaScript las convenciones son bastante similares a las que usamos con las funciones. Siempre debemos utilizar nombres de clases que sean descriptivos y que facilmente expliquen las capacidades que tiene esa clase.
+A la hora de trabajar con clases en JavaScript las convenciones son bastante similares a las que usamos con las funciones. Siempre debemos utilizar nombres de clases que sean descriptivos y que fácilmente expliquen las capacidades que tiene esa clase.
 
-La unica diferencia que vamos a señalar es que para el caso de las clases vamos a hacer uso de la escritura pascal o **PascalCase** o **UpperCamelCase**, que es bastante similar a la de camelCase solo que esta siempre inicia en mayuscula.
+La única diferencia que vamos a señalar es que para el caso de las clases vamos a hacer uso de la escritura pascal o **PascalCase** o **UpperCamelCase**, que es bastante similar a la de camelCase solo que esta siempre inicia en mayúscula.
 
 ```javascript
 class CatNumberOne { 
@@ -114,7 +114,136 @@ class CatNumberOne {
   }
 }
 
-var catOne = new CatNumberOne('Pimienta', 'Braian', 'Gray');
+let catOne = new CatNumberOne('Pimienta', 'Braian', 'Gray');
 ```
 
 ## 6. Convenciones para COMPONENTES.
+
+En JavaScript el uso de componentes es muy utilizado en los frameworks y librerías más modernas, como lo son React, Angular, Vue, Svelte, etc...
+Los componentes se usan en el DOM, aun así se recomienda seguir los lineamientos y tratarlos de la misma forma que a las **Clases** y a las **Funciones** dependiendo de la forma en la que se desarrolle el componente.
+Los componentes siempre deben ir en **PascalCase**.
+
+```javascript
+
+// ✅ Perfecto!
+function CatComponent({catName, ownerName, catColor}) {
+  return (
+    <div>
+      <p>🐈: {catName}</p>
+      <p>👤: {ownerName}</p>
+      <p>🎨: {catColor}</p>
+    </div>
+  )
+}
+
+// ❌ usar PascalCase!
+function cat({catName, ownerName, catColor}) {
+  return (
+    <div>
+      <p>🐈: {name}</p>
+      <p>👤: {ownerName}</p>
+      <p>🎨: {catColor}</p>
+    </div>
+  )
+}
+```
+
+## 7. Convenciones para MÉTODOS.
+
+En JavaScript la estructura de una función y de un método son muy similares, aunque existen algunas diferencias. Por lo tanto, las reglas de convención de nomenclatura son las mismas a las que mencionamos antes.
+
+Siempre debemos usar mayúsculas y minúsculas a la hora de declarar nuestros métodos así como usar verbos como prefijos, ayuda a que los nombres sean más significativos.
+
+```JavaScript
+class Cat {
+  constructor(catName, ownerName, catColor) {
+    this.catName = catName
+    this.ownerName = ownerName
+    this.catColor = catColor
+  }
+  
+  // ✅ Perfecto!
+  getName() {
+    return this.catName
+  }
+
+  // ❌ no tiene un nombre suficientemente representativo!
+  owner() {
+    return this.ownerName
+  }
+
+  // ❌ usar camelCase!
+  get_color() {
+    return this.catColor
+  }
+}
+
+let catOne = new Cat('Pimienta', 'Braian', 'grey') 
+
+console.log(catOne.getName()) // "Pimienta"
+
+```
+
+## 8. Convenciones para FUNCIONES PRIVADAS.
+
+En JavaScript solemos usar el _ (guión bajo) para denotar variables o funciones privadas. Simplemente agregamos el guión bajo delante del nombre de nuestra variable o función respetando la convenciones previas sobre el uso de variables y funciones.
+
+```JavaScript
+class Cat {
+  constructor(catName, ownerName, catColor) {
+    this.catName = catName
+    this.ownerName = ownerName
+    this.catColor = catColor
+    this.catInfo = _getAllInfo(catName, ownerName, catColor)
+  }
+  
+  // ✅ Perfecto!
+  _getAllInfo(catName, ownerName, catColor) {
+    return `🐈:${catName} - 👤:${ownerName} - 🎨:${catColor}`
+  }  
+}
+
+let catOne = new Cat('Pimienta', 'Braian', 'grey') 
+
+// ✅ Perfecto!
+let allInfo = catOne.catInfo
+console.log(allInfo) // "🐈:Pimienta - 👤:Braian - 🎨:grey"
+
+// ❌
+allInfo = catOne._getAllInfo('Pimienta', 'Braian', 'grey') 
+
+```
+
+## 9. Convenciones para VARIABLES GLOBALES.
+
+No existen estándares de nomenclatura específicos para las variables globales en JavaScript, de todos modos se suele recomendar usar mayúsculas y minúsculas (camelCase) para variables mutables y solo mayúsculas para variables inmutables.
+
+```JavaScript
+const URL = 'https://www.google.com/'
+let catName = 'Pimienta'
+let animal = 'cat'
+
+function searchCatNameInGoogle() {
+  return `${URL}search?q=${animal}+${catName}`
+}
+
+console.log(searchCatNameInGoogle()) // "https://www.google.com/search?q=cat+Pimienta"
+```
+
+## 10. Convenciones para NOMBRES de ARCHIVOS.
+
+Hay un tema con el nombre de los archivos al momento de tenerlos en un servidor web.
+
+La mayoría de los servidores web (Apache, Unix) distingue entre mayusculas y minusculas a la hora de manejar archivos, por lo que para el servidor index.js no es el mismo archivo que Index.js
+
+Por otro lado, en servidores web como el IIS de Microsoft no suele hacer esta diferenciación, por lo que se puede usar tanto index.js como Index.js y acceder al mismo archivo.
+
+Claramente esto puede traer muchos problemas a la hora de mover nuestro código de un servidor a otro. Entonces para evitar estos posibles errores se recomienda siempre llamar a nuestros archivos en minúscula sin importar el servidor que se utilice.
+
+## Conclusión
+
+Si llegaste hasta acá te agradezco por tu tiempo, espero que este contenido te sea de utilidad. En este post vimos 10 convenciones de nomenclatura de JavaScript que se pueden aplicar a cualquier proyecto y de esta forma mejorar nuestras habilidades a la hora de codear.
+
+Como desarrolladores siempre debemos perseguir las mejores prácticas para de esta forma mejorar la legibilidad de nuestro código y facilitarnos el desarrollo tanto propio como con nuestro equipo.
+
+¡Muchas gracias por leer!
