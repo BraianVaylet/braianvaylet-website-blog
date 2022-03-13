@@ -47,7 +47,7 @@ const BodyProject = ({ image, content, links }: BodyProjectPropsTypes) => {
           />
         </Flex>}
         <Flex
-          p={5}
+          p={2}
           w={['100%', '100%', image ? '75%' : '100%', image ? '75%' : '100%']}
           direction={'column'}
           align={'flex-start'}
@@ -59,7 +59,8 @@ const BodyProject = ({ image, content, links }: BodyProjectPropsTypes) => {
         </Flex>
       </Flex>
       <Flex
-        align={'center'}
+        direction={['column', 'column', 'row', 'row']}
+        align={['flex-end', 'flex-end', 'center', 'center']}
         justify={'flex-end'}
         w={'100%'}
         mt={5}
@@ -67,7 +68,8 @@ const BodyProject = ({ image, content, links }: BodyProjectPropsTypes) => {
         {links.map((link: linkPropsTypes) => (
           <Button
             key={link.url}
-            mr={5}
+            mr={[0, 0, 5, 5]}
+            mb={[5, 5, 0, 0]}
             leftIcon={link.icon && <Icon as={link.icon} />}
             as={AlterLink}
             href={link.url}>

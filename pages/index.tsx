@@ -222,6 +222,7 @@ const Home: NextPage = () => {
             const color = colorSchemeArr[rand]
             return (
               <Badge
+                m={0.25}
                 key={skill}
                 variant='outline'
                 colorScheme={color}
