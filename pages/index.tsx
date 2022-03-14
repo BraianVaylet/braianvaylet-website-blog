@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 
-import { Avatar, Badge, Flex, Text } from '@chakra-ui/react'
+import { Avatar, AvatarBadge, Badge, Flex, Text, Tooltip } from '@chakra-ui/react'
 import Layout from 'components/Layout'
 import NextHead from 'components/NextHead'
 import Stepper from 'components/Stepper'
@@ -76,7 +76,25 @@ const Home: NextPage = () => {
             name={'Braian Vaylet'}
             src={Perfil.src}
             loading={'lazy'}
-          />
+          >
+            <AvatarBadge
+              borderColor='brand.primary'
+              bg='brand.primary'
+              boxSize='.6em'
+              right={1.5}
+              bottom={1.5}
+            >
+              <Tooltip label={'working remotely'}>
+                <Text
+                  fontSize={'.3em'}
+                  _hover={{
+                    opacity: 0.9,
+                    cursor: 'pointer'
+                  }}
+                >🏠</Text>
+              </Tooltip>
+            </AvatarBadge>
+          </Avatar>
         </Flex>
       </Flex>
 
