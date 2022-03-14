@@ -6,7 +6,31 @@
 
 ## 👉 [braianvaylet.dev/](https://braianvaylet.dev/)
 
-### Esta es mi web personal donde podrán acceder a info sobre mi además de a mi blog, donde "espero" poder subir contenido todas las semanas... La aplicación está desarrollada con Next.js, TypeScript, ChakraUI, Markdown y siguiendo una arquitectura basada en el JamStack. En estos momentos se encuentra deployada en Vercel.
+Hola 👋! Mi nombre es Braian Vaylet y soy un desarrollador autodidacta amante de las tecnologías web.
+
+Me encuentro trabajando como desarrollador web desde 2018, desde entonces trabajé en varias empresas y en muchos proyectos diferentes. 
+Al inicio cubría un rol de desarrollador FullStack ya que me encontraba trabajando para pequeñas empresas, luego al arrancar a trabajar en empresas más grandes decidí dedicarme al FrontEnd y especializarme en esa área.
+
+Como desarrollador autodidacta siempre estoy en modo estudio, ya sea sobre temas relacionados al Front como también a UX/UI y Web3. 
+
+Me interesa mucho la tecnología blockchain por lo que me estoy especializando como desarrollador Web3 así como en Solidity para la creación de Smart Contract.
+
+En este repo esta es mi web personal donde podrán acceder a información sobre mi además de mi blog, donde "espero" poder subir contenido todas las semanas (lo que dudo que suceda)... 
+
+La aplicación está desarrollada con Next.js, TypeScript, ChakraUI, Markdown y siguiendo una arquitectura basada en el JamStack. En estos momentos se encuentra deployada en Vercel.
+
+Es un proyecto en constante desarrollo así que pretendo continuar trabajando al menos 1 vez por semana en él.
+
+Cualquier observación que quieran hacerme será más que bienvenida ya que las considero de gran utilidad para mejorar como programador así como mejorar el proyecto.
+
+Muchas gracias!
+
+## 📝 Posts:
+
+- [Deja de utilizar importaciones relativas en tus proyectos de React](https://braianvaylet.dev/posts/deja-de-utilizar-importaciones-relativas-en-tus-proyectos)
+- [Cómo invertir un array en JavaScript conservando el array original](https://braianvaylet.dev/posts/invertir-un-array-en-javascript)
+- [10 convenciones de nomenclaturas en JavaScript](https://braianvaylet.dev/posts/diez-convenciones-de-nomenclaturas-en-javascript)
+
 
 
 ---
