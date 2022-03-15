@@ -84,7 +84,7 @@ const Home: NextPage = () => {
               right={1.5}
               bottom={1.5}
             >
-              <Tooltip label={'working remotely'}>
+              <Tooltip label={'working from home'}>
                 <Text
                   fontSize={'.3em'}
                   _hover={{
