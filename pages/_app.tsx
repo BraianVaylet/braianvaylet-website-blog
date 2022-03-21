@@ -5,7 +5,7 @@ import 'styles/prism-night-owl.css'
 
 function MyApp ({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={ customTheme }>
+    <ChakraProvider theme={customTheme}>
       <CSSReset />
       <ColorModeScript initialColorMode={customTheme.initialColorMode} />
       <Component {...pageProps} />

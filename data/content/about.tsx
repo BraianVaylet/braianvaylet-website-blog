@@ -8,11 +8,11 @@ const introduction = `
 
 export const content = [
   {
-    title: <Text>📚 Estudiante en tecnologías <b>web3</b> y <b>blockchain</b></Text>,
+    title: <Text>🚀 Estudiante en tecnologías <b>Web3</b> y <b>Blockchain</b></Text>,
     content: null
   },
   {
-    title: <Text>📚 Estudiante en diseño y desarrollo <b>UX/UI</b></Text>,
+    title: <Text>🔮 Estudiante en diseño y desarrollo <b>UX/UI</b></Text>,
     content: null
   },
   {
@@ -20,7 +20,7 @@ export const content = [
     content: null
   },
   {
-    title: <Text>👨‍💻 <b>Desarrollador frontend</b> en Telecom Globant</Text>,
+    title: <Text>👨‍💻 Desarrollador <b>frontend</b> en Telecom Globant</Text>,
     content: null
   }
 ]
