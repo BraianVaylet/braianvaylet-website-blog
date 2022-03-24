@@ -9,8 +9,8 @@ const customTheme = extendTheme({
       'html, body': {
         width: '100%',
         fontSize: 'md',
-        bg: props.colorMode === 'dark' ? 'black' : 'white',
-        color: props.colorMode === 'dark' ? 'gray.300' : 'gray.600',
+        bg: props.colorMode === 'dark' ? '#08090c' : 'white',
+        color: props.colorMode === 'dark' ? '#bfc8d9' : '#364259',
         lineHeight: 'tall',
         scrollBehavior: 'smooth'
       },
@@ -24,14 +24,14 @@ const customTheme = extendTheme({
       },
       // Gradient Scroll Bar handle
       '::-webkit-scrollbar-thumb': {
-        background: 'linear-gradient(#66FFC4, #B33BF9)'
+        background: 'linear-gradient(#33FFB1, #B33BF9)'
       }
     })
   },
   colors: {
     brand: {
-      primary: '#66FFC4',
-      secondary: '#B33BF9'
+      primary: '#33FFB1',
+      secondary: '#b33bf9'
     }
   }
 })

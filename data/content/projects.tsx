@@ -11,6 +11,29 @@ const introduction = `
 
 const content = [
   {
+    title: '🎨 V Dark Theme',
+    content: (
+      <BodyProject
+        image={{
+          src: 'https://raw.githubusercontent.com/BraianVaylet/v-dark-theme/main/logo-v-dark150px.png',
+          alt: 'logo V Dark Theme'
+        }}
+        content={'🎨 V Dark Theme - Un tema para Visual Studio y Windows Terminal inspirado en la paleta de colores de esta web.'}
+        links={[
+          {
+            url: 'https://marketplace.visualstudio.com/items?itemName=BraianVaylet.v-dark',
+            name: 'VSCode Marketplace'
+          },
+          {
+            url: 'https://github.com/BraianVaylet/v-dark-theme',
+            name: 'Github',
+            icon: FaGithub
+          }
+        ]}
+      />
+    )
+  },
+  {
     title: '🦅 Aquila Store',
     content: (
       <BodyProject
