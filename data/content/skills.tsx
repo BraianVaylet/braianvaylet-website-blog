@@ -1,7 +1,7 @@
 const title = 'Skills'
 
 const introduction = `
-  Durante mis años como desarrollador fui ganando experiencia en varias tecnologías. Con algunas de ellas estoy mas al dia que con otras, todo depende con que este trabajando en estos momentos...
+  Durante mis años como desarrollador fui ganando experiencia en varias tecnologías. Con algunas de ellas estoy mas al día que con otras, todo depende con que este trabajando en estos momentos...
 `
 
 const content = [

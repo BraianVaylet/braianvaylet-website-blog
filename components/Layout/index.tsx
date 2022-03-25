@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { Button, Flex, Icon } from '@chakra-ui/react'
+import { Badge, Button, Flex, Icon } from '@chakra-ui/react'
 import Navbar from 'components/Navbar'
 import AlterLink from 'components/AlterLink'
 import Footer from 'components/Footer'
@@ -11,6 +11,11 @@ import { Pages, Sections } from 'utils/routes'
 import { Social } from 'data/content/social'
 
 import { Logo } from 'utils/images'
+
+const VDarkTheme = {
+  href: 'https://marketplace.visualstudio.com/items?itemName=BraianVaylet.v-dark',
+  title: 'V Dark Theme'
+}
 
 interface LayoutPropsTypes {
   children: ReactNode,
@@ -56,7 +61,7 @@ const Layout = ({ children, head }: LayoutPropsTypes) => {
                     key={link.title}
                     as={AlterLink}
                     leftIcon={link.icon && <Icon as={link.icon} />}
-                    mr={10}
+                    mr={2.5}
                     fontSize={'lg'}
                     letterSpacing={0.5}
                     href={link.path}
@@ -64,6 +69,16 @@ const Layout = ({ children, head }: LayoutPropsTypes) => {
                     {link.title}
                   </Button>
                 ))}
+                <Button
+                  variant={'outline'}
+                  as={AlterLink}
+                  fontSize={'lg'}
+                  letterSpacing={0.5}
+                  href={VDarkTheme.href}
+                >
+                  {VDarkTheme.title}
+                  <Badge ml='1' colorScheme='green'>New</Badge>
+                </Button>
               </Flex>
               <IconTheme variant={'outline'} />
             </Flex>
@@ -89,6 +104,18 @@ const Layout = ({ children, head }: LayoutPropsTypes) => {
                   {link.title}
                 </Button>
               ))}
+              <Button
+                variant={'outline'}
+                as={AlterLink}
+                mb={10}
+                w={'100%'}
+                fontSize={'lg'}
+                letterSpacing={0.5}
+                href={VDarkTheme.href}
+              >
+                {VDarkTheme.title}
+                <Badge ml='1' colorScheme='green'>New</Badge>
+              </Button>
               <IconTheme
                 variant={'outline'}
                 mb={10}
@@ -136,6 +163,14 @@ const Layout = ({ children, head }: LayoutPropsTypes) => {
                       {link.title}
                     </AlterLink>
                 ))}
+                <AlterLink
+                  fontSize={'lg'}
+                  mr={10}
+                  letterSpacing={0.5}
+                  href={VDarkTheme.href}>
+                    {VDarkTheme.title}
+                    <Badge ml='1' colorScheme='green'>New</Badge>
+                  </AlterLink>
               </Flex>
 
               <Flex
