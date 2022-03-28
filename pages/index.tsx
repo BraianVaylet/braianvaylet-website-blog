@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 
-import { Avatar, AvatarBadge, Badge, Flex, Text, Tooltip } from '@chakra-ui/react'
+import { Avatar, Badge, Flex, Text, Tooltip } from '@chakra-ui/react'
 import Layout from 'components/Layout'
 import NextHead from 'components/NextHead'
 import Stepper from 'components/Stepper'
