@@ -229,7 +229,13 @@ const VDarkThemePage = () => {
             Si te gusta el theme y quieres ayudarme a continuar con su desarrollo y mantenimiento
             puedes hacerlo donando lo que tu prefieras a esta wallet. (Puede ser en BTC, ETH, BNB, USDT, DAI o CAKE.)
           </Text>
-          <Text fontSize={'2xl'} fontWeight='bold'>👉 {Constants.wallet}</Text>
+          <Text
+            mt={2}
+            fontSize={['xs', 'xs', '2xl', '2xl']}
+            fontWeight='bold'
+          >
+            👉 {Constants.wallet}
+          </Text>
         </Flex>
 
         <Stepper />
