@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { Badge, Button, Flex, Icon } from '@chakra-ui/react'
+import { Button, Flex, Icon } from '@chakra-ui/react'
 import Navbar from 'components/Navbar'
 import AlterLink from 'components/AlterLink'
 import Footer from 'components/Footer'
