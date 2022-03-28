@@ -24,6 +24,7 @@ const Home: NextPage = () => {
         <NextHead
           title={'Braian Vaylet - Home'}
           description={'Web personal'}
+          canonical={'https://braianvaylet.dev/'}
         />
       }
     >

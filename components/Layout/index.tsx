@@ -12,11 +12,6 @@ import { Social } from 'data/content/social'
 
 import { Logo } from 'utils/images'
 
-const VDarkTheme = {
-  href: 'https://marketplace.visualstudio.com/items?itemName=BraianVaylet.v-dark',
-  title: 'V Dark Theme'
-}
-
 interface LayoutPropsTypes {
   children: ReactNode,
   head: ReactNode
@@ -69,16 +64,6 @@ const Layout = ({ children, head }: LayoutPropsTypes) => {
                     {link.title}
                   </Button>
                 ))}
-                <Button
-                  variant={'outline'}
-                  as={AlterLink}
-                  fontSize={'lg'}
-                  letterSpacing={0.5}
-                  href={VDarkTheme.href}
-                >
-                  {VDarkTheme.title}
-                  <Badge ml='1' colorScheme='green'>New</Badge>
-                </Button>
               </Flex>
               <IconTheme variant={'outline'} />
             </Flex>
@@ -104,18 +89,6 @@ const Layout = ({ children, head }: LayoutPropsTypes) => {
                   {link.title}
                 </Button>
               ))}
-              <Button
-                variant={'outline'}
-                as={AlterLink}
-                mb={10}
-                w={'100%'}
-                fontSize={'lg'}
-                letterSpacing={0.5}
-                href={VDarkTheme.href}
-              >
-                {VDarkTheme.title}
-                <Badge ml='1' colorScheme='green'>New</Badge>
-              </Button>
               <IconTheme
                 variant={'outline'}
                 mb={10}
@@ -163,14 +136,6 @@ const Layout = ({ children, head }: LayoutPropsTypes) => {
                       {link.title}
                     </AlterLink>
                 ))}
-                <AlterLink
-                  fontSize={'lg'}
-                  mr={10}
-                  letterSpacing={0.5}
-                  href={VDarkTheme.href}>
-                    {VDarkTheme.title}
-                    <Badge ml='1' colorScheme='green'>New</Badge>
-                  </AlterLink>
               </Flex>
 
               <Flex

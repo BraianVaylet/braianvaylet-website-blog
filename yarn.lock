@@ -1855,6 +1855,11 @@ classnames@2.2.6:
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
 
+classnames@^2.2.5:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
+
 clean-stack@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/clean-stack/-/clean-stack-2.2.0.tgz#ee8472dbb129e727b31e8a10a427dee9dfe4008b"
@@ -4555,7 +4560,7 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -4651,6 +4656,13 @@ react-dom@17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
+react-easy-swipe@^0.0.21:
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/react-easy-swipe/-/react-easy-swipe-0.0.21.tgz#ce9384d576f7a8529dc2ca377c1bf03920bac8eb"
+  integrity sha512-OeR2jAxdoqUMHIn/nS9fgreI5hSpgGoL5ezdal4+oO7YSSgJR8ga+PkYGJrSrJ9MKlPcQjMQXnketrD7WNmNsg==
+  dependencies:
+    prop-types "^15.5.8"
+
 react-fast-compare@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
@@ -4711,6 +4723,15 @@ react-remove-scroll@2.4.1:
     tslib "^1.0.0"
     use-callback-ref "^1.2.3"
     use-sidecar "^1.0.1"
+
+react-responsive-carousel@^3.2.23:
+  version "3.2.23"
+  resolved "https://registry.yarnpkg.com/react-responsive-carousel/-/react-responsive-carousel-3.2.23.tgz#4c0016ff54603e604bb5c1f9e7ef2d1eda133f1d"
+  integrity sha512-pqJLsBaKHWJhw/ItODgbVoziR2z4lpcJg+YwmRlSk4rKH32VE633mAtZZ9kDXjy4wFO+pgUZmDKPsPe1fPmHCg==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.5.8"
+    react-easy-swipe "^0.0.21"
 
 react-style-singleton@^2.1.0:
   version "2.1.1"

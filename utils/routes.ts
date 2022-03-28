@@ -10,6 +10,10 @@ export const Pages = [
   {
     path: '/posts',
     title: 'Blog'
+  },
+  {
+    path: '/themes/vdark',
+    title: 'V Dark Theme'
   }
 ]
 
