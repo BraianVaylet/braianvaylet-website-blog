@@ -2,7 +2,7 @@
    <img align="center" width="100" src="https://raw.githubusercontent.com/BraianVaylet/braianvaylet-website-blog/main/public/images/logo.png" />   
 </p>
 
-# 👋 Website & Blog
+# 👋 Website
 
 ## 👉 [braianvaylet.dev/](https://braianvaylet.dev/)
 
