@@ -1,4 +1,4 @@
-import { Flex, Heading, Icon, Link, Text } from '@chakra-ui/react'
+import { Flex, Heading, Icon, Text } from '@chakra-ui/react'
 import { FaGithub } from 'react-icons/fa'
 import CustomImage from 'components/Image/CustomImage'
 import Layout from 'components/Layout'
@@ -137,9 +137,9 @@ const VDarkThemePage = () => {
             justify={'flex-start'}
             w={'100%'}
           >
-            <ColorBrand bgColor={'#08090c'} />
-            <ColorBrand bgColor={'#101219'} />
-            <ColorBrand bgColor={'#364259'} />
+            <ColorBrand bgColor={'#08090c'} textColor={'white'}/>
+            <ColorBrand bgColor={'#101219'} textColor={'white'}/>
+            <ColorBrand bgColor={'#364259'} textColor={'white'}/>
             <ColorBrand bgColor={'#7385ab'} textColor={'black'}/>
             <ColorBrand bgColor={'#bfc8d9'} textColor={'black'}/>
             <ColorBrand bgColor={'#66ffc4'} textColor={'black'}/>
