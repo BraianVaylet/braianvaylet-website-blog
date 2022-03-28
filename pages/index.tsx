@@ -10,6 +10,7 @@ import Card from 'components/Card'
 
 import { Perfil } from 'utils/images'
 
+import { Constants } from 'data/content/constants'
 import section1 from 'data/content/presentation'
 import section2 from 'data/content/about'
 import section3 from 'data/content/experience'
@@ -24,7 +25,7 @@ const Home: NextPage = () => {
         <NextHead
           title={'Braian Vaylet - Home'}
           description={'Web personal'}
-          canonical={'https://braianvaylet.dev/'}
+          canonical={Constants.web}
         />
       }
     >

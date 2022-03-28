@@ -1,12 +1,13 @@
 import { Flex, Heading, Icon, Text } from '@chakra-ui/react'
 import { FaGithub } from 'react-icons/fa'
+import ReactResponsiveCarousel from 'components/ReactResponsiveCarousel'
 import CustomImage from 'components/Image/CustomImage'
 import Layout from 'components/Layout'
 import NextHead from 'components/NextHead'
-import ReactResponsiveCarousel from 'components/ReactResponsiveCarousel'
 import Stepper from 'components/Stepper'
-import { Logo, Themes } from 'utils/images'
 import AlterLink from 'components/AlterLink'
+import { Logo, Themes } from 'utils/images'
+import { Constants } from 'data/content/constants'
 
 const ColorBrand = ({ bgColor, textColor }: {bgColor: string, textColor?: string}) => (
   <Flex
@@ -35,7 +36,7 @@ const VDarkThemePage = () => {
         <NextHead
           title={'Braian Vaylet - V Dark Theme'}
           description={'V Dark Theme by Braian Vaylet'}
-          canonical={'https://braianvaylet.dev/themes/vdark'}
+          canonical={Constants.vdark}
         />
       }
     >
@@ -80,7 +81,7 @@ const VDarkThemePage = () => {
               fontSize={'md'}
             >
               Hola, mi nombre es Braian Vaylet y soy un desarrollador amante de las tecnologías web. A continuación les presento <b>V Dark</b>
-              un theme basado en la paleta de colores de mi website <b><a href="https://braianvaylet.dev/">braianvaylet.dev</a></b>. Me base como
+              un theme basado en la paleta de colores de mi website <b><a href={Constants.web}>braianvaylet.dev</a></b>. Me base como
               inspiración en <b><a href={'https://github.com/daltonmenezes/aura-theme'}>Aura theme</a></b> y en la paleta de colores de <b><a href={'https://chakra-ui.com/'}>Chakra UI</a></b>.
             </Text>
             <AlterLink
@@ -207,6 +208,47 @@ const VDarkThemePage = () => {
               <img src={Themes.vdark.windowTerminal.img3.src} alt={'Window Terminal theme example 3'} />
             </div>
           </ReactResponsiveCarousel>
+        </Flex>
+
+        <Stepper />
+
+        {/* Section4: Help */}
+        <Flex
+          direction={'column'}
+          align={'flex-start'}
+          justify={'flex-start'}
+          w={'100%'}
+        >
+          <Heading
+            as={'h3'}
+            mb={10}
+          >
+            Te gustaría ayudarme?
+          </Heading>
+          <Text>
+            Si te gusta el theme y quieres ayudarme a continuar con su desarrollo y mantenimiento
+            puedes hacerlo donando lo que tu prefieras a esta wallet. (Puede ser en BTC, ETH, BNB, USDT, DAI o CAKE.)
+          </Text>
+          <Text fontSize={'2xl'} fontWeight='bold'>👉 {Constants.wallet}</Text>
+        </Flex>
+
+        <Stepper />
+
+        {/* Section5: Bye! */}
+        <Flex
+          direction={'column'}
+          align={'flex-start'}
+          justify={'flex-start'}
+          w={'100%'}
+        >
+          <Heading
+            as={'h5'}
+            fontSize={'1.5em'}
+            mb={10}
+            color={'brand.primary'}
+          >
+            Gracias por llegar hasta el final, espero que disfrutes el Theme y todo feedback ayuda! 😄...
+          </Heading>
         </Flex>
       </Flex>
     </Layout>
