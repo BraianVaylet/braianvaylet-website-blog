@@ -31,7 +31,11 @@ Muchas gracias!
 - [Cómo invertir un array en JavaScript conservando el array original](https://braianvaylet.dev/posts/invertir-un-array-en-javascript)
 - [10 convenciones de nomenclaturas en JavaScript](https://braianvaylet.dev/posts/diez-convenciones-de-nomenclaturas-en-javascript)
 
+## 🎨 V Dark Theme
 
+V Dark Theme es un tema basado en la paleta de colores de esta web. 
+
+👉 [V Dark](https://braianvaylet.dev/themes/vdark)
 
 ---
 
