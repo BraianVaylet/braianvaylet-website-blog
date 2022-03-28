@@ -73,30 +73,19 @@ const Home: NextPage = () => {
           mb={[10, 10, 0, 0]}
           w={['100%', '100%', '40%', '40%']}
         >
-          <Avatar
-            size={'2xl'}
-            name={'Braian Vaylet'}
-            src={Perfil.src}
-            loading={'lazy'}
+          <Tooltip
+            label={'Hey! estoy trabajando desde casa 🏠'}
+            bg={'brand.primary'}
+            color={'gray.800'}
           >
-            <AvatarBadge
-              borderColor='brand.primary'
-              bg='brand.primary'
-              boxSize='.6em'
-              right={1.5}
-              bottom={1.5}
-            >
-              <Tooltip label={'working from home'}>
-                <Text
-                  fontSize={'.3em'}
-                  _hover={{
-                    opacity: 0.9,
-                    cursor: 'pointer'
-                  }}
-                >🏠</Text>
-              </Tooltip>
-            </AvatarBadge>
-          </Avatar>
+            <Avatar
+              size={'2xl'}
+              name={'Braian Vaylet'}
+              src={Perfil.src}
+              loading={'lazy'}
+            />
+          </Tooltip>
+
         </Flex>
       </Flex>
 

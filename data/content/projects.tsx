@@ -21,6 +21,10 @@ const content = [
         content={'🎨 V Dark Theme - Un tema para Visual Studio y Windows Terminal inspirado en la paleta de colores de esta web.'}
         links={[
           {
+            url: '/themes/vdark',
+            name: 'Web'
+          },
+          {
             url: 'https://marketplace.visualstudio.com/items?itemName=BraianVaylet.v-dark',
             name: 'VSCode Marketplace'
           },
