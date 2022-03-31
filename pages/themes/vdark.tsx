@@ -80,9 +80,7 @@ const VDarkThemePage = () => {
               mt={5}
               fontSize={'md'}
             >
-              Hola, mi nombre es Braian Vaylet y soy un desarrollador amante de las tecnologías web. A continuación les presento <b>V Dark</b>
-              un theme basado en la paleta de colores de mi website <b><a href={Constants.web}>braianvaylet.dev</a></b>. Me base como
-              inspiración en <b><a href={'https://github.com/daltonmenezes/aura-theme'}>Aura theme</a></b> y en la paleta de colores de <b><a href={'https://chakra-ui.com/'}>Chakra UI</a></b>.
+              Hola, mi nombre es Braian Vaylet y soy un desarrollador amante de las tecnologías web. A continuación les presento <b>V Dark</b> un theme basado en la paleta de colores de mi website <b><a href={Constants.web}>braianvaylet.dev</a></b>. Me base como inspiración en <b><a href={'https://github.com/daltonmenezes/aura-theme'}>Aura theme</a></b> y en la paleta de colores de <b><a href={'https://chakra-ui.com/'}>Chakra UI</a></b>.
             </Text>
             <AlterLink
               href={'https://github.com/BraianVaylet/v-dark-theme'}
