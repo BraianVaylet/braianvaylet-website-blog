@@ -1,5 +1,5 @@
 .card__border-gradient {
   border: 5px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #33FFB1, #B33BF9);
+  border-image-source: linear-gradient(to right, #19FDB5, #FF6AA3);
 }

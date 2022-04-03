@@ -9,6 +9,140 @@ import AlterLink from 'components/AlterLink'
 import { Logo, Themes } from 'utils/images'
 import { Constants } from 'data/content/constants'
 
+interface ThemeColorProps {
+  color: string,
+  textColor: string
+}
+
+const ThemeVDark = [
+  {
+    color: '#08090c',
+    textColor: 'white'
+  },
+  {
+    color: '#101219',
+    textColor: 'white'
+  },
+  {
+    color: '#364259',
+    textColor: 'white'
+  },
+  {
+    color: '#7385ab',
+    textColor: 'black'
+  },
+  {
+    color: '#bfc8d9',
+    textColor: 'black'
+  },
+  {
+    color: '#19FDB5',
+    textColor: 'black'
+  },
+  {
+    color: '#18D89B',
+    textColor: 'black'
+  },
+  {
+    color: '#FF6AA3',
+    textColor: 'black'
+  },
+  {
+    color: '#f56565',
+    textColor: 'black'
+  },
+  {
+    color: '#f6e05e',
+    textColor: 'black'
+  }
+]
+
+const ThemeVDarkCarrot = [
+  {
+    color: '#08090c',
+    textColor: 'white'
+  },
+  {
+    color: '#101219',
+    textColor: 'white'
+  },
+  {
+    color: '#364259',
+    textColor: 'white'
+  },
+  {
+    color: '#7385ab',
+    textColor: 'black'
+  },
+  {
+    color: '#bfc8d9',
+    textColor: 'black'
+  },
+  {
+    color: '#ffaa3a',
+    textColor: 'black'
+  },
+  {
+    color: '#ed8936',
+    textColor: 'black'
+  },
+  {
+    color: '#48bb78',
+    textColor: 'black'
+  },
+  {
+    color: '#f56565',
+    textColor: 'black'
+  },
+  {
+    color: '#f6e05e',
+    textColor: 'black'
+  }
+]
+
+const ThemeVDarkLemon = [
+  {
+    color: '#08090c',
+    textColor: 'white'
+  },
+  {
+    color: '#101219',
+    textColor: 'white'
+  },
+  {
+    color: '#364259',
+    textColor: 'white'
+  },
+  {
+    color: '#7385ab',
+    textColor: 'black'
+  },
+  {
+    color: '#bfc8d9',
+    textColor: 'black'
+  },
+  {
+    color: '#d8ff00',
+    textColor: 'black'
+  },
+  {
+    color: '#a6ff00',
+    textColor: 'black'
+  },
+  {
+    color: '#36f213',
+    textColor: 'black'
+  },
+  {
+    color: '#f56565',
+    textColor: 'black'
+  },
+  {
+    color: '#f6e05e',
+    textColor: 'black'
+  }
+]
+
 const ColorBrand = ({ bgColor, textColor }: {bgColor: string, textColor?: string}) => (
   <Flex
     p={1}
@@ -136,16 +270,9 @@ const VDarkThemePage = () => {
             justify={'flex-start'}
             w={'100%'}
           >
-            <ColorBrand bgColor={'#08090c'} textColor={'white'}/>
-            <ColorBrand bgColor={'#101219'} textColor={'white'}/>
-            <ColorBrand bgColor={'#364259'} textColor={'white'}/>
-            <ColorBrand bgColor={'#7385ab'} textColor={'black'}/>
-            <ColorBrand bgColor={'#bfc8d9'} textColor={'black'}/>
-            <ColorBrand bgColor={'#66ffc4'} textColor={'black'}/>
-            <ColorBrand bgColor={'#33ffb1'} textColor={'black'}/>
-            <ColorBrand bgColor={'#b33bf9'} textColor={'black'}/>
-            <ColorBrand bgColor={'#f56565'} textColor={'black'}/>
-            <ColorBrand bgColor={'#f6e05e'} textColor={'black'}/>
+            {ThemeVDark.map((theme: ThemeColorProps) => (
+              <ColorBrand key={theme.color} bgColor={theme.color} textColor={theme.textColor}/>
+            ))}
           </Flex>
 
         </Flex>
@@ -178,13 +305,13 @@ const VDarkThemePage = () => {
 
           <ReactResponsiveCarousel>
             <div>
-              <img src={Themes.vdark.vscode.img1.src} alt={'VSCode theme example 1'} />
+              <img src={Themes.vdark.vscode.img1} alt={'VSCode theme example 1'} />
             </div>
             <div>
-              <img src={Themes.vdark.vscode.img2.src} alt={'VSCode theme example 2'} />
+              <img src={Themes.vdark.vscode.img2} alt={'VSCode theme example 2'} />
             </div>
             <div>
-              <img src={Themes.vdark.vscode.img3.src} alt={'VSCode theme example 3'} />
+              <img src={Themes.vdark.vscode.img3} alt={'VSCode theme example 3'} />
             </div>
           </ReactResponsiveCarousel>
 
@@ -197,15 +324,102 @@ const VDarkThemePage = () => {
 
           <ReactResponsiveCarousel>
             <div>
-              <img src={Themes.vdark.windowTerminal.img1.src} alt={'Window Terminal theme example 1'} />
+              <img src={Themes.vdark.windowTerminal.img1} alt={'Window Terminal theme example 1'} />
             </div>
             <div>
-              <img src={Themes.vdark.windowTerminal.img2.src} alt={'Window Terminal theme example 2'} />
+              <img src={Themes.vdark.windowTerminal.img2} alt={'Window Terminal theme example 2'} />
             </div>
             <div>
-              <img src={Themes.vdark.windowTerminal.img3.src} alt={'Window Terminal theme example 3'} />
+              <img src={Themes.vdark.windowTerminal.img3} alt={'Window Terminal theme example 3'} />
             </div>
           </ReactResponsiveCarousel>
+
+          <Heading
+            as={'h3'}
+            my={10}
+          >
+            Slack
+          </Heading>
+          <div>
+            <img src={Themes.vdark.slack.img1} alt={'slack theme example 1'} />
+          </div>
+        </Flex>
+
+        <Stepper />
+
+        <Flex
+          direction={'column'}
+          align={'flex-start'}
+          justify={'flex-start'}
+          w={'100%'}
+        >
+          <Heading
+            as={'h3'}
+            mb={10}
+          >
+            Prueba sus nuevas variantes
+          </Heading>
+
+          <Flex
+            align={'center'}
+            justify={'space-between'}
+            w={'100%'}
+          >
+            <Flex
+              direction={'column'}
+              align={'center'}
+              justify={'flex-start'}
+              w={'40%'}
+            >
+              <CustomImage
+                src={Themes.vdark.logos.carrot}
+                loading={'lazy'}
+                alt={'Logo V Dark Carrot Theme'}
+                w={'25%'}
+              />
+              <Heading as={'h4'}>
+                Carrot
+              </Heading>
+              <Flex
+                direction={'column'}
+                align={'center'}
+                justify={'flex-start'}
+                w={'100%'}
+              >
+                {ThemeVDarkCarrot.map((theme: ThemeColorProps) => (
+                  <ColorBrand key={theme.color} bgColor={theme.color} textColor={theme.textColor}/>
+                ))}
+              </Flex>
+            </Flex>
+
+            <Flex
+              direction={'column'}
+              align={'center'}
+              justify={'flex-start'}
+              w={'40%'}
+            >
+              <CustomImage
+                src={Themes.vdark.logos.lemon}
+                loading={'lazy'}
+                alt={'Logo V Dark Lemon Theme'}
+                w={'25%'}
+              />
+              <Heading as={'h4'}>
+                Lemon
+              </Heading>
+              <Flex
+                direction={'column'}
+                align={'center'}
+                justify={'flex-start'}
+                w={'100%'}
+              >
+                {ThemeVDarkLemon.map((theme: ThemeColorProps) => (
+                  <ColorBrand key={theme.color} bgColor={theme.color} textColor={theme.textColor}/>
+                ))}
+              </Flex>
+            </Flex>
+          </Flex>
+
         </Flex>
 
         <Stepper />

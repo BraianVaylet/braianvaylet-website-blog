@@ -24,14 +24,14 @@ const customTheme = extendTheme({
       },
       // Gradient Scroll Bar handle
       '::-webkit-scrollbar-thumb': {
-        background: 'linear-gradient(#33FFB1, #B33BF9)'
+        background: 'linear-gradient(#19FDB5, #FF6AA3)'
       }
     })
   },
   colors: {
     brand: {
-      primary: '#33FFB1',
-      secondary: '#b33bf9'
+      primary: '#19FDB5',
+      secondary: '#FF6AA3'
     }
   }
 })
