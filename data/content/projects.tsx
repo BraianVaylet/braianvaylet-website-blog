@@ -15,7 +15,7 @@ const content = [
     content: (
       <BodyProject
         image={{
-          src: 'https://raw.githubusercontent.com/BraianVaylet/v-dark-theme/main/logo-v-dark150px.png',
+          src: 'https://raw.githubusercontent.com/BraianVaylet/v-dark-theme/main/public/images/logos/logo.png',
           alt: 'logo V Dark Theme'
         }}
         content={'🎨 V Dark Theme - Un tema para Visual Studio y Windows Terminal inspirado en la paleta de colores de esta web.'}
