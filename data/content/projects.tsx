@@ -18,7 +18,7 @@ const content = [
           src: 'https://raw.githubusercontent.com/BraianVaylet/v-dark-theme/main/public/images/logos/logo.png',
           alt: 'logo V Dark Theme'
         }}
-        content={'🎨 V Dark Theme - Un tema para Visual Studio y Windows Terminal inspirado en la paleta de colores de esta web.'}
+        content={'🎨 V Dark Theme - Un tema inspirado en la paleta de colores de esta web. Actualmente tiene soporte para Visual Studio Code, Slack y Windows Terminal.'}
         links={[
           {
             url: '/themes/vdark',

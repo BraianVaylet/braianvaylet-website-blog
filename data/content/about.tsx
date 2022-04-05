@@ -3,7 +3,7 @@ import { Text } from '@chakra-ui/react'
 const title = 'Que estoy haciendo'
 
 const introduction = `
-  Soy de esas personas a la que le gusta estar haciendo un poco de todo, desde el 2021 me encuentro cubriendo varios roles en paralelo.
+  Soy de esas personas a la que le gusta estar haciendo un poco de todo, desde el 2021 me encuentro cubriendo varios roles en paralelo y estudiando a full 💪.
 `
 
 export const content = [

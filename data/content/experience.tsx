@@ -4,8 +4,8 @@ const title = 'Experiencia'
 
 const introduction = `
   En los últimos años trabajé en diferentes empresas donde puede aplicar mis conocimientos como desarrollador utilizando varias
-  tecnologías del mercado, cubriendo roles como desarrollador FullStack y como desarrollador FrontEnd desde pequeños a grandes 
-  proyectos. También pude tener la experiencia de cubrir otros roles como los de Referente tecnológico en Frontend, Technical Leader, 
+  tecnologías del mercado, cubriendo roles como desarrollador FullStack y como desarrollador FrontEnd en pequeños y grandes 
+  proyectos. También pude tener la experiencia de cubrir otros roles como los de Referente tecnológico, Technical Leader, 
   Project Manager, Technical Recruiter, Organizador de eventos y conferencias en tecnología y algunos más que no vale la pena mencionar...
   A partir de 2021 decidí también dedicarme a la educación tomando el rol de tutor en los cursos de React dictados por Coderhouse.
 `
@@ -30,6 +30,9 @@ const content = [
           su funcionalidad con el desarrollo de un Design System propio basado en Stencil.js y del uso de un BFF implementado en
           Strapi. Es un proyecto en constante desarrollo donde todos los días buscamos implementar nuevas mejoras 
           y tecnologías para obtener la mejor performance y velocidad de desarrollo.
+          <br/>
+          A partir de 2022 la empresa sufrió una reorganización de sus equipos y pase a formar parte del equipo de UpperFunel para el 
+          proyecto de Landing donde estamos llevando mas allá la arquitectura del Front!
         `}
         website={'https://www.telecom.com.ar/'}
       />
@@ -46,7 +49,11 @@ const content = [
           entre por medio de la empresa gA, en la cual me encontraba trabajando.
           <br/>
           Tras su adquisición por Globant, pase a formar parte de la empresa bajo el
-          puesto de Web UI Developer Ssr Adv. donde comencé a trabajar para la cuenta de Telecom ARG como desarrollador FrontEnd del proyecto Transformación-IT
+          puesto de Web UI Developer Ssr Adv. donde comencé a trabajar para la cuenta de Telecom ARG
+          como desarrollador FrontEnd del proyecto Transformación-IT.
+          <br/>
+          En Abril de 2022 arranque a cubrir el rol de Web UI Developer Senior donde pase a tomar otras
+          responsabilidades dentro de la empresa.
         `}
         website={'https://www.globant.com/'}
       />
@@ -59,9 +66,12 @@ const content = [
         content={`
           <i>(Junio 2021 - Actualidad)</i>
           <br/>
-          Inicie en Coderhouse a principios del 2021 como estudiante del curso de React.js. Al finalizar decidí continuar en la plataforma y tomar el rol de Tutor.
+          Inicie en Coderhouse a principios del 2021 como estudiante del curso de React.js. Al finalizar decidí continuar 
+          en la plataforma y tomar el rol de Tutor.
           <br/>
-          Entre mis responsabilidades como tutor se encuentran brindar apoyo a los estudiantes, resolver todas sus dudas respecto a los temas del curso como así como con la plataforma, corregir los desafíos incluidos en el cursado y dictar los after-class (clases extras dictadas por tutores para complementar ciertos temas).
+          Entre mis responsabilidades como tutor se encuentran brindar apoyo a los estudiantes, resolver todas sus dudas 
+          respecto a los temas del curso así como con la propia plataforma, corregir los desafíos incluidos en el cursado
+          y dictar los after-class (clases extras dictadas por tutores para complementar ciertos temas).
         `}
         website={'https://www.coderhouse.com/'}
       />
@@ -74,9 +84,12 @@ const content = [
         content={`
           <i>(Noviembre 2020 - Febrero 2020)</i>
           <br/>
-          Parabolt es una unidad de la empresa gA o grupo Assa, ingrese en Noviembre del 2020 para trabajar en un proyecto <b>Sensie</b>, un nuevo cliente de la empresa.
+          Parabolt es una unidad de la empresa gA o grupo Assa, ingrese en Noviembre del 2020 para trabajar en el proyecto <b>Sensie</b>
+          de un nuevo cliente de la empresa.
           <br/>
-          Ingresé como desarrollador FrontEnd y referente en React, nuestro trabajo era desarrollar e integrar el front de la landing page y del CMS con el equipo de backend y el equipo mobile (desarrollados por otras empresas situadas en EEUU y España). Desarrollamos el producto utilizando React, React Native y GraphQL.
+          Ingresé como desarrollador FrontEnd y referente tecnológico en React, nuestro trabajo era desarrollar e integrar el front de la
+          landing page y del CMS con el equipo de backend y el equipo mobile (desarrollados por otras empresas situadas en EEUU y España).
+          Desarrollamos el producto utilizando React, React Native y GraphQL.
         `}
         website={'https://grupoassa.com/'}
       />
