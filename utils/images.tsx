@@ -19,6 +19,9 @@ const Themes = {
     },
     slack: {
       img1: 'https://raw.githubusercontent.com/BraianVaylet/v-dark-theme/main/public/images/screenshots/slack-sceen1.png'
+    },
+    chrome: {
+      img1: 'https://raw.githubusercontent.com/BraianVaylet/v-dark-theme/main/public/images/screenshots/chrome-screen1.png'
     }
   }
 }

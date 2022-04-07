@@ -215,6 +215,16 @@ const VDarkThemePage = () => {
           <div>
             <img src={Themes.vdark.slack.img1} alt={'slack theme example 1'} />
           </div>
+
+          <Heading
+            as={'h3'}
+            my={10}
+          >
+            Chrome
+          </Heading>
+          <div>
+            <img src={Themes.vdark.chrome.img1} alt={'chrome theme example 1'} />
+          </div>
         </Flex>
 
         <Stepper />

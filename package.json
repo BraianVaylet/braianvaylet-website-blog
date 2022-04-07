@@ -15,6 +15,7 @@
     "@chakra-ui/react": "^1.7.3",
     "@emotion/react": "11",
     "@emotion/styled": "11",
+    "boar-design": "^0.1.1",
     "date-fns": "^2.23.0",
     "framer-motion": "5",
     "gray-matter": "^4.0.3",
