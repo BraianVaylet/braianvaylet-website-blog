@@ -22,6 +22,9 @@ const Themes = {
     },
     chrome: {
       img1: 'https://raw.githubusercontent.com/BraianVaylet/v-dark-theme/main/public/images/screenshots/chrome-img1.png'
+    },
+    firefox: {
+      img1: 'https://raw.githubusercontent.com/BraianVaylet/v-dark-theme/main/public/images/screenshots/firefox-img1.png'
     }
   }
 }

@@ -1,4 +1,6 @@
-import { Flex, Heading, Icon, Text } from '@chakra-ui/react'
+import { ReactNode } from 'react'
+import { useRouter } from 'next/router'
+import { Flex, Heading, Icon, Text, Badge } from '@chakra-ui/react'
 import { FaGithub } from 'react-icons/fa'
 import ReactResponsiveCarousel from 'components/ReactResponsiveCarousel'
 import CustomImage from 'components/Image/CustomImage'
@@ -9,13 +11,34 @@ import AlterLink from 'components/AlterLink'
 import { Constants } from 'data/content/constants'
 import { Logo, Themes } from 'utils/images'
 import { ThemeVDark, ThemeVDarkCarrot, ThemeVDarkLemon } from 'utils/constants'
+import { randomColorScheme } from 'utils'
+
+const PLATFORM_NAME = {
+  vscode: 'vscode',
+  'windows-terminal': 'windows-terminal',
+  slack: 'slack',
+  chrome: 'chrome',
+  firefox: 'firefox'
+}
 
 interface ThemeColorProps {
   color: string,
   textColor: string
 }
 
-const ColorBrand = ({ bgColor, textColor }: {bgColor: string, textColor?: string}) => (
+interface ColorBrandComponentProps {
+  bgColor: string,
+  textColor?: string
+}
+
+interface PhotoThemeComponentProps {
+  id?: string,
+  title: string,
+  imgArr: string[],
+  children?: ReactNode
+}
+
+const ColorBrandComponent = ({ bgColor, textColor }: ColorBrandComponentProps) => (
   <Flex
     p={1}
     w={'100%'}
@@ -34,6 +57,64 @@ const ColorBrand = ({ bgColor, textColor }: {bgColor: string, textColor?: string
     {bgColor.toUpperCase()}
   </Flex>
 )
+
+const PhotoThemeComponent = ({ id, title, imgArr, children, ...props }: PhotoThemeComponentProps) => {
+  return (
+    <Flex
+      id={id}
+      direction={'column'}
+      align={'flex-start'}
+      justify={'flex-start'}
+      w={'100%'}
+      {...props}
+    >
+      <Heading
+        as={'h3'}
+        my={10}
+      >
+        {title}
+      </Heading>
+      {children && (
+        <Flex
+          direction={'column'}
+          align={'flex-start'}
+          justify={'flex-start'}
+          w={'100%'}
+          mb={10}
+        >
+          {children}
+        </Flex>
+      )}
+      <ReactResponsiveCarousel>
+        {imgArr.map((img: string, index: number) => (
+          <div key={`${title}-${img}`}>
+            <img src={img} alt={`${title} theme example ${index}`} />
+          </div>
+        ))}
+      </ReactResponsiveCarousel>
+    </Flex>
+  )
+}
+
+const LinkBadge = ({ id }: {id: string}) => {
+  const { pathname } = useRouter()
+  return (
+    <AlterLink
+      href={`/${pathname}/#${id}`}
+      textDecoration={'none'}
+      mr={2}
+      _hover={{
+        opacity: 0.8
+      }}
+    >
+      <Badge
+        variant='outline'
+      >
+        {id}
+      </Badge>
+    </AlterLink>
+  )
+}
 
 const VDarkThemePage = () => {
   return (
@@ -103,6 +184,18 @@ const VDarkThemePage = () => {
                 <Text ml={2}>Github</Text>
               </Flex>
             </AlterLink>
+            <Flex
+              width={'100%'}
+              py={5}
+              align={'flex-start'}
+              justify={'flex-start'}
+            >
+              <LinkBadge id={PLATFORM_NAME.vscode} />
+              <LinkBadge id={PLATFORM_NAME['windows-terminal']} />
+              <LinkBadge id={PLATFORM_NAME.slack} />
+              <LinkBadge id={PLATFORM_NAME.chrome} />
+              <LinkBadge id={PLATFORM_NAME.firefox} />
+            </Flex>
           </Flex>
           <Flex
             direction={'column'}
@@ -143,7 +236,7 @@ const VDarkThemePage = () => {
             w={'100%'}
           >
             {ThemeVDark.map((theme: ThemeColorProps) => (
-              <ColorBrand key={theme.color} bgColor={theme.color} textColor={theme.textColor}/>
+              <ColorBrandComponent key={theme.color} bgColor={theme.color} textColor={theme.textColor}/>
             ))}
           </Flex>
 
@@ -158,73 +251,63 @@ const VDarkThemePage = () => {
           justify={'flex-start'}
           w={'100%'}
         >
-          <Heading
-            as={'h3'}
-            mb={10}
+          <PhotoThemeComponent
+            id={PLATFORM_NAME.vscode}
+            title={'Visual Studio Code'}
+            imgArr={[Themes.vdark.vscode.img1, Themes.vdark.vscode.img2, Themes.vdark.vscode.img3]}
           >
-            Visual Studio Code
-            <AlterLink
-              href={'https://marketplace.visualstudio.com/items?itemName=BraianVaylet.v-dark'}
-              textDecoration={'underline'}
-              ml={2}
-              _hover={{
-                color: 'brand.secondary'
-              }}
-            >
-              Marketplace
-            </AlterLink>
-          </Heading>
+            <Text>
+              👉
+              <AlterLink
+                href={'https://marketplace.visualstudio.com/items?itemName=BraianVaylet.v-dark'}
+                textDecoration={'underline'}
+                ml={2}
+                _hover={{
+                  color: 'brand.secondary'
+                }}
+              >
+                Download
+              </AlterLink>
+            </Text>
+          </PhotoThemeComponent>
 
-          <ReactResponsiveCarousel>
-            <div>
-              <img src={Themes.vdark.vscode.img1} alt={'VSCode theme example 1'} />
-            </div>
-            <div>
-              <img src={Themes.vdark.vscode.img2} alt={'VSCode theme example 2'} />
-            </div>
-            <div>
-              <img src={Themes.vdark.vscode.img3} alt={'VSCode theme example 3'} />
-            </div>
-          </ReactResponsiveCarousel>
+          <PhotoThemeComponent
+            id={PLATFORM_NAME['windows-terminal']}
+            title={'Window 10 Terminal'}
+            imgArr={[Themes.vdark.windowTerminal.img1, Themes.vdark.windowTerminal.img2, Themes.vdark.windowTerminal.img3]}
+          />
 
-          <Heading
-            as={'h3'}
-            my={10}
+          <PhotoThemeComponent
+            id={PLATFORM_NAME.slack}
+            title={'Slack'}
+            imgArr={[Themes.vdark.slack.img1]}
+          />
+
+          <PhotoThemeComponent
+            id={PLATFORM_NAME.chrome}
+            title={'Chrome'}
+            imgArr={[Themes.vdark.chrome.img1]}
+          />
+
+          <PhotoThemeComponent
+            id={PLATFORM_NAME.firefox}
+            title={'Firefox'}
+            imgArr={[Themes.vdark.firefox.img1]}
           >
-            Window 10 Terminal
-          </Heading>
-
-          <ReactResponsiveCarousel>
-            <div>
-              <img src={Themes.vdark.windowTerminal.img1} alt={'Window Terminal theme example 1'} />
-            </div>
-            <div>
-              <img src={Themes.vdark.windowTerminal.img2} alt={'Window Terminal theme example 2'} />
-            </div>
-            <div>
-              <img src={Themes.vdark.windowTerminal.img3} alt={'Window Terminal theme example 3'} />
-            </div>
-          </ReactResponsiveCarousel>
-
-          <Heading
-            as={'h3'}
-            my={10}
-          >
-            Slack
-          </Heading>
-          <div>
-            <img src={Themes.vdark.slack.img1} alt={'slack theme example 1'} />
-          </div>
-
-          <Heading
-            as={'h3'}
-            my={10}
-          >
-            Chrome
-          </Heading>
-          <div>
-            <img src={Themes.vdark.chrome.img1} alt={'chrome theme example 1'} />
-          </div>
+            <Text>
+              👉
+              <AlterLink
+                href={'https://addons.mozilla.org/en-US/firefox/addon/v-dark-theme/'}
+                textDecoration={'underline'}
+                ml={2}
+                _hover={{
+                  color: 'brand.secondary'
+                }}
+              >
+                Download
+              </AlterLink>
+            </Text>
+          </PhotoThemeComponent>
         </Flex>
 
         <Stepper />
@@ -269,7 +352,7 @@ const VDarkThemePage = () => {
                 w={'100%'}
               >
                 {ThemeVDarkCarrot.map((theme: ThemeColorProps) => (
-                  <ColorBrand key={theme.color} bgColor={theme.color} textColor={theme.textColor}/>
+                  <ColorBrandComponent key={theme.color} bgColor={theme.color} textColor={theme.textColor}/>
                 ))}
               </Flex>
             </Flex>
@@ -296,7 +379,7 @@ const VDarkThemePage = () => {
                 w={'100%'}
               >
                 {ThemeVDarkLemon.map((theme: ThemeColorProps) => (
-                  <ColorBrand key={theme.color} bgColor={theme.color} textColor={theme.textColor}/>
+                  <ColorBrandComponent key={theme.color} bgColor={theme.color} textColor={theme.textColor}/>
                 ))}
               </Flex>
             </Flex>
