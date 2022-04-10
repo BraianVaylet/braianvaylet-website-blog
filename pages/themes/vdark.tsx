@@ -11,7 +11,6 @@ import AlterLink from 'components/AlterLink'
 import { Constants } from 'data/content/constants'
 import { Logo, Themes } from 'utils/images'
 import { ThemeVDark, ThemeVDarkCarrot, ThemeVDarkLemon } from 'utils/constants'
-import { randomColorScheme } from 'utils'
 
 const PLATFORM_NAME = {
   vscode: 'vscode',
