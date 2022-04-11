@@ -188,6 +188,7 @@ const VDarkThemePage = () => {
               py={5}
               align={'flex-start'}
               justify={'flex-start'}
+              wrap={'wrap'}
             >
               <LinkBadge id={PLATFORM_NAME.vscode} />
               <LinkBadge id={PLATFORM_NAME['windows-terminal']} />
