@@ -1,12 +1,13 @@
 import type { NextPage } from 'next'
 
-import { Avatar, Badge, Flex, Text, Tooltip } from '@chakra-ui/react'
+import { Avatar, Flex, Text, Tooltip } from '@chakra-ui/react'
 import Layout from 'components/Layout'
 import NextHead from 'components/NextHead'
 import Stepper from 'components/Stepper'
 import AccordionList from 'components/AccordionList'
 import RenderHTML from 'components/RenderHTML'
 import Card from 'components/Card'
+import RandomColorsBadges from 'components/RandomColorsBadges'
 
 import { Perfil } from 'utils/images'
 
@@ -225,21 +226,7 @@ const Home: NextPage = () => {
           justify={'flex-start'}
           wrap={'wrap'}
         >
-          {section5.content && section5.content.map((skill: string) => {
-            const colorSchemeArr = ['gray', 'red', 'orange', 'yellow', 'green', 'teal', 'blue', 'cyan', 'purple', 'pink']
-            const rand = Math.random() * colorSchemeArr.length | 0
-            const color = colorSchemeArr[rand]
-            return (
-              <Badge
-                m={0.25}
-                key={skill}
-                variant='outline'
-                colorScheme={color}
-              >
-                {skill}
-              </Badge>
-            )
-          })}
+          <RandomColorsBadges list={section5.content}/>
         </Flex>
       </Flex>
 

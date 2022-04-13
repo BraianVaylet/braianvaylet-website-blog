@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { Button, Flex, Icon } from '@chakra-ui/react'
+import { Button, Flex, Icon, Text } from '@chakra-ui/react'
 import Navbar from 'components/Navbar'
 import AlterLink from 'components/AlterLink'
 import Footer from 'components/Footer'
@@ -178,6 +178,10 @@ const Layout = ({ children, head }: LayoutPropsTypes) => {
             </Flex>
           </Flex>
         </Footer>
+        <Text mb={5}>
+          {'Con mucho 💚 y '}
+          <AlterLink _hover={{ color: 'brand.primary' }} href='https://nextjs.org/'>Next.js</AlterLink>
+        </Text>
       </Flex>
     </Flex>
   )

@@ -15,7 +15,7 @@ export interface PostTypes extends FlexProps {
   slug: string,
   title: string
   description: string,
-  readingTime: {
+  readingtime: {
     minutes: number,
     text: string,
     time: number,

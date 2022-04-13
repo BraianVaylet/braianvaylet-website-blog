@@ -25,6 +25,14 @@ const customTheme = extendTheme({
       // Gradient Scroll Bar handle
       '::-webkit-scrollbar-thumb': {
         background: 'linear-gradient(#19FDB5, #FF6AA3)'
+      },
+      pre: {
+        '::-webkit-scrollbar': {
+          height: '5px'
+        },
+        '::-webkit-scrollbar-thumb': {
+          background: '#FF6AA3'
+        }
       }
     })
   },

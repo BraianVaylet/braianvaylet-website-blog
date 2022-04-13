@@ -61,6 +61,7 @@ const content = [
             icon: FaGithub
           }
         ]}
+        stack={['react', 'chakra-ui', 'firebase']}
       />
     )
   },
@@ -84,6 +85,7 @@ const content = [
             icon: FaGithub
           }
         ]}
+        stack={['react', 'grommet', 'firebase']}
       />
     )
   },
@@ -112,6 +114,7 @@ const content = [
             icon: FaGithub
           }
         ]}
+        stack={['next.js', 'chakra-ui', 'ethers', 'solidity', 'hardhat', 'alchemy']}
       />
     )
   },
@@ -140,6 +143,7 @@ const content = [
             icon: FaGithub
           }
         ]}
+        stack={['next.js', 'chakra-ui', 'ethers', 'solidity', 'hardhat', 'alchemy']}
       />
     )
   },
@@ -168,6 +172,7 @@ const content = [
             icon: FaGithub
           }
         ]}
+        stack={['next.js', 'chakra-ui', 'ethers', 'solidity', 'hardhat', 'alchemy']}
       />
     )
   },
@@ -206,6 +211,7 @@ const content = [
             icon: FaGithub
           }
         ]}
+        stack={['next.js', 'chakra-ui', 'ethers', '3rdweb']}
       />
     )
   },
@@ -229,6 +235,7 @@ const content = [
             icon: FaGithub
           }
         ]}
+        stack={['tsdx', 'react', 'storybook', 'styled-components']}
       />
     )
   }

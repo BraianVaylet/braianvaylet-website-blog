@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { serialize } from 'next-mdx-remote/serialize'
-import readingTime from 'reading-time'
+import readingtime from 'reading-time'
 import mdxPrism from 'mdx-prism'
 
 const root = process.cwd()
@@ -23,7 +23,7 @@ export const getFileBySlug = async (type: string, slug: string | string[] | unde
   return {
     source,
     frontMatter: {
-      readingTime: readingTime(content),
+      readingtime: readingtime(content),
       slug,
       ...data
     }

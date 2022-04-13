@@ -9,7 +9,8 @@ const Footer = ({ children }: FooterPropsTypes) => {
   return (
     <Box
       padding={5}
-      marginY={10}
+      mt={10}
+      mb={5}
       w='100%'
       borderWidth={1}
       borderRadius={10}

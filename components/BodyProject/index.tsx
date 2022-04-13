@@ -1,7 +1,8 @@
+import { ReactNode } from 'react'
 import { Flex, Text, Button, Icon } from '@chakra-ui/react'
 import AlterLink from 'components/AlterLink'
 import CustomImage from 'components/Image/CustomImage'
-import { ReactNode } from 'react'
+import RandomColorsBadges from 'components/RandomColorsBadges'
 
 interface linkPropsTypes {
   name: ReactNode,
@@ -15,10 +16,11 @@ interface BodyProjectPropsTypes {
     alt: string
   },
   content: string,
-  links: linkPropsTypes[]
+  links: linkPropsTypes[],
+  stack?: string[]
 }
 
-const BodyProject = ({ image, content, links }: BodyProjectPropsTypes) => {
+const BodyProject = ({ image, content, links, stack }: BodyProjectPropsTypes) => {
   return (
     <Flex
       direction={'column'}
@@ -56,6 +58,15 @@ const BodyProject = ({ image, content, links }: BodyProjectPropsTypes) => {
           <Text w={'100%'}>
             {content}
           </Text>
+          <Flex
+            align={'flex-start'}
+            justify={'flex-start'}
+            wrap={'wrap'}
+            my={2}
+            w={'100%'}
+          >
+            <RandomColorsBadges list={stack}/>
+          </Flex>
         </Flex>
       </Flex>
       <Flex

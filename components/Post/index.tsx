@@ -8,7 +8,7 @@ export interface PostPropsTypes extends FlexProps{
   title: string
   description: string,
   showDescription?: boolean
-  readingTime: {
+  readingtime: {
     minutes: number,
     text: string,
     time: number,
@@ -21,7 +21,7 @@ const Post = ({
   title,
   date,
   tags,
-  readingTime,
+  readingtime,
   description,
   showDescription = true,
   ...props
@@ -80,7 +80,8 @@ const Post = ({
             color={'gray.300'}
             mt={3}
           >
-            {readingTime && Math.round(readingTime.minutes) + ' minutos de lectura - '}{date}
+            <Text color={'brand.secondary'}>{readingtime && Math.round(readingtime.minutes) + ' minutos de lectura'}</Text>
+            <Text ml={2}>{date}</Text>
           </Text>
         </Flex>
       </Flex>
