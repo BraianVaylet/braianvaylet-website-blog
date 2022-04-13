@@ -1,12 +1,12 @@
 import { Flex, FlexProps } from '@chakra-ui/react'
-import Image, { ImageProps } from 'next/image'
+import Image from 'next/image'
 
-export interface CustomImagePropsTypes extends ImageProps {
+export interface CustomImagePropsTypes extends FlexProps {
   src: string,
   alt: string
 }
 
-const CustomImage = ({ src, alt, ...props }: CustomImagePropsTypes | FlexProps) => (
+const CustomImage = ({ src, alt, ...props }: CustomImagePropsTypes) => (
   <Flex
     direction={'column'}
     align='center'
