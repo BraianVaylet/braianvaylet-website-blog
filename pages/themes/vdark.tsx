@@ -206,7 +206,6 @@ const VDarkThemePage = () => {
           >
             <CustomImage
               src={Logo.src}
-              loading={'lazy'}
               alt={'Logo V Dark Theme'}
               w={'50%'}
             />
@@ -338,7 +337,6 @@ const VDarkThemePage = () => {
             >
               <CustomImage
                 src={Themes.vdark.logos.carrot}
-                loading={'lazy'}
                 alt={'Logo V Dark Carrot Theme'}
                 w={'25%'}
               />
@@ -365,7 +363,6 @@ const VDarkThemePage = () => {
             >
               <CustomImage
                 src={Themes.vdark.logos.lemon}
-                loading={'lazy'}
                 alt={'Logo V Dark Lemon Theme'}
                 w={'25%'}
               />

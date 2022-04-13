@@ -83,7 +83,6 @@ const Home: NextPage = () => {
               size={'2xl'}
               name={'Braian Vaylet'}
               src={Perfil.src}
-              loading={'lazy'}
             />
           </Tooltip>
 
