@@ -18,7 +18,7 @@ const content = [
           src: 'https://raw.githubusercontent.com/BraianVaylet/v-dark-theme/main/public/images/logos/logo.png',
           alt: 'logo V Dark Theme'
         }}
-        content={'🎨 V Dark Theme - Un tema inspirado en la paleta de colores de esta web. Actualmente tiene soporte para Visual Studio Code, Slack y Windows Terminal.'}
+        content={'🎨 V Dark Theme - Un tema inspirado en la paleta de colores de esta web. Actualmente tiene soporte para varias plataformas.'}
         links={[
           {
             url: '/themes/vdark',
@@ -26,7 +26,11 @@ const content = [
           },
           {
             url: 'https://marketplace.visualstudio.com/items?itemName=BraianVaylet.v-dark',
-            name: 'VSCode Marketplace'
+            name: 'vscode'
+          },
+          {
+            url: 'https://addons.mozilla.org/en-US/firefox/addon/v-dark-theme/',
+            name: 'firefox'
           },
           {
             url: 'https://github.com/BraianVaylet/v-dark-theme',
@@ -34,6 +38,7 @@ const content = [
             icon: FaGithub
           }
         ]}
+        stack={['vscode', 'windows-terminal', 'slack', 'chrome', 'firefox', 'css', 'scss']}
       />
     )
   },
@@ -225,6 +230,10 @@ const content = [
         }}
         content={'🐗 Boar Design System, es un Design System de componentes en React.'}
         links={[
+          {
+            url: 'https://www.npmjs.com/package/boar-design',
+            name: 'NPM'
+          },
           {
             url: 'https://boar-design-system.vercel.app/',
             name: 'Storybook'
