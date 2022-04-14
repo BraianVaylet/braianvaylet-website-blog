@@ -9,7 +9,6 @@ interface linkPropsTypes {
   url: string,
   icon?: any
 }
-
 interface BodyProjectPropsTypes {
   image?: {
     src: string,

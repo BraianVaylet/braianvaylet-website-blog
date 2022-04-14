@@ -1,13 +1,15 @@
 import { Flex, useColorModeValue } from '@chakra-ui/react'
 import AlterLink from 'components/AlterLink'
+import RandomColorsBadges from 'components/RandomColorsBadges'
 import RenderHTML from 'components/RenderHTML'
 
 interface BodyExperiencePropsTypes {
   content: string,
-  website?: string
+  website?: string,
+  stack?: string[],
 }
 
-const BodyExperience = ({ content, website }: BodyExperiencePropsTypes) => {
+const BodyExperience = ({ content, website, stack }: BodyExperiencePropsTypes) => {
   const color = useColorModeValue('brand.secondary', 'brand.primary')
   return (
     <Flex
@@ -17,6 +19,15 @@ const BodyExperience = ({ content, website }: BodyExperiencePropsTypes) => {
       w={'100%'}
     >
       <RenderHTML html={content} />
+      <Flex
+        align={'flex-start'}
+        justify={'flex-start'}
+        wrap={'wrap'}
+        my={2}
+        w={'100%'}
+      >
+        <RandomColorsBadges list={stack}/>
+      </Flex>
       {website && (
         <AlterLink
           mt={5}

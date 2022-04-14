@@ -34,6 +34,7 @@ const content = [
           A partir de 2022 la empresa sufrió una reorganización de sus equipos y pase a formar parte del equipo de UpperFunel para el 
           proyecto de Landing donde estamos llevando mas allá la arquitectura del Front!
         `}
+        stack={['nextjs', 'react', 'typescript', 'stenciljs', 'scss', 'aem', 'strapi', 'nodejs', 'jest', 'React-Testing-Library', 'metodologías-ágiles', 'jira']}
         website={'https://www.telecom.com.ar/'}
       />
     )
@@ -55,6 +56,7 @@ const content = [
           En Abril de 2022 arranque a cubrir el rol de Web UI Developer Senior donde pase a tomar otras
           responsabilidades dentro de la empresa.
         `}
+        stack={['tecnologías-web', 'frontend', 'react', 'javascript', 'ui-ux']}
         website={'https://www.globant.com/'}
       />
     )
@@ -73,6 +75,7 @@ const content = [
           respecto a los temas del curso así como con la propia plataforma, corregir los desafíos incluidos en el cursado
           y dictar los after-class (clases extras dictadas por tutores para complementar ciertos temas).
         `}
+        stack={['react', 'firebase', 'tutorías', 'seguimiento-de-estudiantes', 'educación-online']}
         website={'https://www.coderhouse.com/'}
       />
     )
@@ -91,6 +94,7 @@ const content = [
           landing page y del CMS con el equipo de backend y el equipo mobile (desarrollados por otras empresas situadas en EEUU y España).
           Desarrollamos el producto utilizando React, React Native y GraphQL.
         `}
+        stack={['react', 'material-ui', 'scss', 'aws', 'aws-amplify', 'graph-ql', 'nodejs', 'metodologías-ágiles', 'jira']}
         website={'https://grupoassa.com/'}
       />
     )
@@ -110,6 +114,7 @@ const content = [
           <br/>
           Me encontré desarrollando en varias tecnologías como ReactNative, React, TypeScript, NodeJs, Express, Laravel, PHP y otras...
         `}
+        stack={['react-native', 'react', 'typescript', 'nodejs', 'express', 'laravel', 'php', 'mysql', 'postgresql', 'mongodb', 'docker']}
         website={'https://eycon.com/'}
       />
     )
@@ -125,6 +130,7 @@ const content = [
           Junto a un grupo de desarrolladores que se encontraban situados en Venezuela, España, México y Chile comenzamos el desarrollo
           del proyecto el cual consiste de una aplicación web y mobile para la administración de un restaurante.
         `}
+        stack={['react', 'redux-saga', 'nodejs', 'express']}
       />
     )
   },
@@ -142,6 +148,7 @@ const content = [
           y algunos roles más que no vale la pena mencionar...
           Durante mi paso por NexoSmart trabaje en más de 60 proyectos web y móviles, el stack que utilizábamos se limitaba a jquery y PHP. 
         `}
+        stack={['html', 'css', 'javascript', 'jquery', 'php', 'mysql', 'aws']}
         website={'https://www.nexosmart.com.ar/'}
       />
     )
