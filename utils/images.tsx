@@ -26,6 +26,16 @@ const Themes = {
     firefox: {
       img1: 'https://raw.githubusercontent.com/BraianVaylet/v-dark-theme/main/public/images/screenshots/firefox-img1.png'
     }
+  },
+  magicmushroom: {
+    logos: {
+      default: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/mushroom.png'
+    },
+    vscode: {
+      img1: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/vscode/vscode-img1.png',
+      img2: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/vscode/vscode-img2.png',
+      img3: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/vscode/vscode-img3.png'
+    }
   }
 }
 

@@ -7,17 +7,18 @@ import Footer from 'components/Footer'
 import IconTheme from 'components/IconTheme'
 import CustomImage from 'components/Image/CustomImage'
 
-import { Pages, Sections } from 'utils/routes'
+import { Pages, ProjectPages, Sections } from 'utils/routes'
 import { Social } from 'data/content/social'
 
 import { Logo } from 'utils/images'
 
 interface LayoutPropsTypes {
   children: ReactNode,
-  head: ReactNode
+  head: ReactNode,
+  className: string
 }
 
-const Layout = ({ children, head }: LayoutPropsTypes) => {
+const Layout = ({ children, head, className }: LayoutPropsTypes) => {
   return (
     <Flex
       direction={'column'}
@@ -132,9 +133,10 @@ const Layout = ({ children, head }: LayoutPropsTypes) => {
                     fontSize={'lg'}
                     mr={10}
                     letterSpacing={0.5}
-                    href={link.path}>
+                    href={link.path}
+                  >
                       {link.title}
-                    </AlterLink>
+                  </AlterLink>
                 ))}
               </Flex>
 
@@ -162,6 +164,23 @@ const Layout = ({ children, head }: LayoutPropsTypes) => {
                 mb={5}
               >
                 {Sections.map(link => (
+                  <AlterLink
+                    key={link.title}
+                    fontSize={'lg'}
+                    mr={10}
+                    href={link.path}>
+                      {link.title}
+                    </AlterLink>
+                ))}
+              </Flex>
+
+              <Flex
+                direction={'column'}
+                justify={'flex-start'}
+                align={'flex-start'}
+                mb={5}
+              >
+                {ProjectPages.map(link => (
                   <AlterLink
                     key={link.title}
                     fontSize={'lg'}

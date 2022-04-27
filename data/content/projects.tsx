@@ -43,6 +43,34 @@ const content = [
     )
   },
   {
+    title: '🍄 Magic Mushroom Theme',
+    content: (
+      <BodyProject
+        image={{
+          src: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/mushroom.png',
+          alt: 'logo V Dark Theme'
+        }}
+        content={'🍄 Magic Mushroom Theme - Un theme ✨mágico para visual studio code.'}
+        links={[
+          {
+            url: '/themes/magicmushroom',
+            name: 'Web'
+          },
+          {
+            url: 'https://marketplace.visualstudio.com/items?itemName=BraianVaylet.magic-mushroom',
+            name: 'vscode'
+          },
+          {
+            url: 'https://github.com/BraianVaylet/magic-mushroom-theme',
+            name: 'Github',
+            icon: FaGithub
+          }
+        ]}
+        stack={['vscode']}
+      />
+    )
+  },
+  {
     title: '🦅 Aquila Store',
     content: (
       <BodyProject

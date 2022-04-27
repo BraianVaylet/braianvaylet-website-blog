@@ -10,10 +10,17 @@ export const Pages = [
   {
     path: '/posts',
     title: 'Blog'
-  },
+  }
+]
+
+export const ProjectPages = [
   {
     path: '/themes/vdark',
     title: 'V Dark Theme'
+  },
+  {
+    path: '/themes/magicmushroom',
+    title: 'Magic Mushroom Theme'
   }
 ]
 

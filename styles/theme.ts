@@ -33,7 +33,12 @@ const customTheme = extendTheme({
         '::-webkit-scrollbar-thumb': {
           background: '#FF6AA3'
         }
+      },
+
+      '.magic-mushroom-theme__container, ::-webkit-scrollbar-thumb': {
+        background: 'linear-gradient(#bff8ee, #a683f9)'
       }
+
     })
   },
   colors: {

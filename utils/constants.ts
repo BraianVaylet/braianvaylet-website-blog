@@ -126,3 +126,46 @@ export const ThemeVDarkLemon = [
     textColor: 'black'
   }
 ]
+
+export const ThemeMagicMushroom = [
+  {
+    color: '#0e0f1b',
+    textColor: 'white'
+  },
+  {
+    color: '#7385ab',
+    textColor: 'black'
+  },
+  {
+    color: '#fcefff',
+    textColor: 'black'
+  },
+  {
+    color: '#a683f9',
+    textColor: 'black'
+  },
+  {
+    color: '#e9a7f9',
+    textColor: 'black'
+  },
+  {
+    color: '#a1eb8f',
+    textColor: 'black'
+  },
+  {
+    color: '#8ee1d3',
+    textColor: 'black'
+  },
+  {
+    color: '#bff8ee',
+    textColor: 'black'
+  },
+  {
+    color: '#f5b187',
+    textColor: 'black'
+  },
+  {
+    color: '#fa7676',
+    textColor: 'black'
+  }
+]
