@@ -15,7 +15,7 @@ import { Logo } from 'utils/images'
 interface LayoutPropsTypes {
   children: ReactNode,
   head: ReactNode,
-  className: string
+  className?: string
 }
 
 const Layout = ({ children, head, className }: LayoutPropsTypes) => {
