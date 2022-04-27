@@ -118,7 +118,6 @@ const LinkBadge = ({ id }: {id: string}) => {
 const MagicMushroomThemePage = () => {
   return (
     <Layout
-      className={'magic-mushroom-theme__container'}
       head={
         <NextHead
           title={'Braian Vaylet - Magic Mushroom Theme'}

@@ -9,7 +9,7 @@ const customTheme = extendTheme({
       'html, body': {
         width: '100%',
         fontSize: 'md',
-        bg: props.colorMode === 'dark' ? '#101219' : 'white',
+        bg: props.colorMode === 'dark' ? '#08090c' : 'white',
         color: props.colorMode === 'dark' ? '#bfc8d9' : '#364259',
         lineHeight: 'tall',
         scrollBehavior: 'smooth'
@@ -33,10 +33,6 @@ const customTheme = extendTheme({
         '::-webkit-scrollbar-thumb': {
           background: '#FF6AA3'
         }
-      },
-
-      '.magic-mushroom-theme__container, ::-webkit-scrollbar-thumb': {
-        background: 'linear-gradient(#bff8ee, #a683f9)'
       }
 
     })
