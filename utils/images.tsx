@@ -32,9 +32,16 @@ const Themes = {
       default: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/mushroom.png'
     },
     vscode: {
-      img1: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/vscode/vscode-img1.png',
-      img2: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/vscode/vscode-img2.png',
-      img3: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/vscode/vscode-img3.png'
+      chaos: {
+        img1: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/vscode/vscode-chaos-img1.png',
+        img2: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/vscode/vscode-chaos-img2.png',
+        img3: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/vscode/vscode-chaos-img3.png'
+      },
+      calypso: {
+        img1: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/vscode/vscode-calypso-img1.png',
+        img2: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/vscode/vscode-calypso-img2.png',
+        img3: 'https://raw.githubusercontent.com/BraianVaylet/magic-mushroom-theme/main/assets/vscode/vscode-calypso-img3.png'
+      }
     }
   }
 }

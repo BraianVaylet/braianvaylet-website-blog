@@ -255,8 +255,8 @@ const MagicMushroomThemePage = () => {
         >
           <PhotoThemeComponent
             id={PLATFORM_NAME.vscode}
-            title={'Visual Studio Code'}
-            imgArr={[Themes.magicmushroom.vscode.img1, Themes.magicmushroom.vscode.img2, Themes.magicmushroom.vscode.img3]}
+            title={'Purple Chaos'}
+            imgArr={[Themes.magicmushroom.vscode.chaos.img1, Themes.magicmushroom.vscode.chaos.img2, Themes.magicmushroom.vscode.chaos.img3]}
           >
             <Text>
               👉
@@ -272,6 +272,12 @@ const MagicMushroomThemePage = () => {
               </AlterLink>
             </Text>
           </PhotoThemeComponent>
+
+          <PhotoThemeComponent
+            id={PLATFORM_NAME.vscode}
+            title={'Green Calypso'}
+            imgArr={[Themes.magicmushroom.vscode.calypso.img1, Themes.magicmushroom.vscode.calypso.img2, Themes.magicmushroom.vscode.calypso.img3]}
+          />
 
           {/* <PhotoThemeComponent
             id={PLATFORM_NAME['windows-terminal']}
