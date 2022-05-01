@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'
 
 export const Social = [
   {
@@ -10,5 +10,14 @@ export const Social = [
     path: 'https://github.com/BraianVaylet',
     title: 'Github',
     icon: FaGithub
+  },
+  {
+    path: 'https://www.instagram.com/bv.web',
+    title: 'BV.WEB',
+    icon: FaInstagram
   }
+]
+
+export const SocialFooter = [
+  ...Social
 ]

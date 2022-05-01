@@ -8,7 +8,7 @@ import IconTheme from 'components/IconTheme'
 import CustomImage from 'components/Image/CustomImage'
 
 import { Pages, ProjectPages, Sections } from 'utils/routes'
-import { Social } from 'data/content/social'
+import { Social, SocialFooter } from 'data/content/social'
 
 import { Logo } from 'utils/images'
 
@@ -146,7 +146,7 @@ const Layout = ({ children, head, className }: LayoutPropsTypes) => {
                 align={'flex-start'}
                 mb={5}
               >
-                {Social.map(link => (
+                {SocialFooter.map(link => (
                   <AlterLink
                     key={link.title}
                     fontSize={'lg'}
