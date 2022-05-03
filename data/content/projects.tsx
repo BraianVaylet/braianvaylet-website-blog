@@ -147,7 +147,7 @@ const content = [
             icon: FaGithub
           }
         ]}
-        stack={['next.js', 'chakra-ui', 'ethers', 'solidity', 'hardhat', 'alchemy']}
+        stack={['next.js', 'chakra-ui', 'ethers', 'solidity', 'hardhat', 'alchemy', 'ethereum']}
       />
     )
   },
@@ -176,7 +176,7 @@ const content = [
             icon: FaGithub
           }
         ]}
-        stack={['next.js', 'chakra-ui', 'ethers', 'solidity', 'hardhat', 'alchemy']}
+        stack={['next.js', 'chakra-ui', 'ethers', 'solidity', 'hardhat', 'alchemy', 'ethereum', 'nft']}
       />
     )
   },
@@ -205,7 +205,36 @@ const content = [
             icon: FaGithub
           }
         ]}
-        stack={['next.js', 'chakra-ui', 'ethers', 'solidity', 'hardhat', 'alchemy']}
+        stack={['next.js', 'chakra-ui', 'ethers', 'solidity', 'hardhat', 'alchemy', 'ethereum', 'nft']}
+      />
+    )
+  },
+  {
+    title: '🦇 Bat Domain ENS Service',
+    content: (
+      <BodyProject
+        image={{
+          src: 'https://raw.githubusercontent.com/BraianVaylet/buildspace-bat-domains-ui/main/public/logo.png',
+          alt: 'logo Bat Domain'
+        }}
+        content={'🦇 Bat Domain, es un servicio ENS implementado sobre la blockchain de Polygon Mumbai que te permitirá conectar tu billetera y acuñar un NFT como dominio usando el token MATIC, que luego podrás ver y editar desde la plataforma.'}
+        links={[
+          {
+            url: 'https://buildspace-bat-domains-ui.vercel.app/',
+            name: 'Web'
+          },
+          {
+            url: 'https://mumbai.polygonscan.com/address/0xC1A6a56FA413A506A054Bf92b96eb20359d3158a',
+            name: 'Contrato',
+            icon: FaEthereum
+          },
+          {
+            url: 'https://github.com/BraianVaylet/buildspace-bat-domains-ui',
+            name: 'Github',
+            icon: FaGithub
+          }
+        ]}
+        stack={['next.js', 'chakra-ui', 'ethers', 'solidity', 'hardhat', 'alchemy', 'polygon', 'mumbai', 'matic', 'ens']}
       />
     )
   },
@@ -244,7 +273,7 @@ const content = [
             icon: FaGithub
           }
         ]}
-        stack={['next.js', 'chakra-ui', 'ethers', '3rdweb']}
+        stack={['next.js', 'chakra-ui', 'ethers', '3rdweb', 'ethereum', 'dao', 'nft']}
       />
     )
   },
