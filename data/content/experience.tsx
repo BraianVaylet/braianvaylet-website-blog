@@ -12,7 +12,7 @@ const introduction = `
 
 const content = [
   {
-    title: 'Banco Galicia, Galicia Rural | Nera',
+    title: 'Galicia',
     content: (
       <BodyExperience
         content={`
