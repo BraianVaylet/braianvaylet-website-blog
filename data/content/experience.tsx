@@ -12,11 +12,26 @@ const introduction = `
 
 const content = [
   {
+    title: 'Banco Galicia, Galicia Rural | Nera',
+    content: (
+      <BodyExperience
+        content={`
+          <i>(Septiembre 2022 - Actualidad)</i>
+          <br/>
+          A principio de Septiembre 2022, termine mi asignación en la cuenta de Telecom para sumarme como desarrollador Mobile para la cuenta de <b>Galicia Agro</b>, donde estamos desarrollando una App en React Native para acompañar el lanzamiento de la nueva plataforma.
+          <br/>          
+        `}
+        stack={['react-native', 'typescript', 'i18n', 'redux-saga', 'graphQl', 'jest', 'react-testing-library', 'metodologías-ágiles', 'jira']}
+        website={'https://www.bancogalicia.com/banca/online/web/Rural'}
+      />
+    )
+  },
+  {
     title: 'Telecom',
     content: (
       <BodyExperience
         content={`
-          <i>(Febrero 2021 - Actualidad)</i>
+          <i>(Febrero 2021 - Septiembre 2022)</i>
           <br/>
           En Febrero del 2021 me uní a la cuenta de Telecom ARG para formar parte del proyecto de Transformación IT, dentro de la 
           Tribu de Canales Digitales. El objetivo inicial del proyecto era la mejora tecnológica de todos los canales digitales

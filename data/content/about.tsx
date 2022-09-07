@@ -12,15 +12,11 @@ export const content = [
     content: null
   },
   {
-    title: <Text>🔮 Estudiante en diseño y desarrollo <b>UX/UI</b></Text>,
-    content: null
-  },
-  {
     title: <Text>👨‍🏫 <b>Tutor</b> en Coderhouse</Text>,
     content: null
   },
   {
-    title: <Text>👨‍💻 Desarrollador <b>frontend</b> en Telecom Globant</Text>,
+    title: <Text>👨‍💻 Desarrollador <b>Web UI</b> en Globant</Text>,
     content: null
   }
 ]

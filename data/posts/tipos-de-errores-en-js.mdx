@@ -1,0 +1,63 @@
+---
+title: 'Tipos de Errores en JavaScript'
+description: 'Que es un error en JS y que tipos de errores existen'
+category: 'javascript'
+date: '2022-05-16'
+tags: 
+  - "JavaScript"
+---
+
+En este post vamos a explicar que es un error en JavaScript, que significan y que tipos de errores existen.
+Comencemos...
+
+# Que es un error?
+
+Podemos ver a los errores como declaraciones que no permite que el programa se ejecute correctamente y por lo tanto no obtenemos el resultado esperado.
+En JavaScript podemos encontrar tres tipos de errores al momento de compilar un programa:
+
+### SyntaxError (errores de sintaxis):
+Estos errores suelen ocurrir cuando hay algo incorrecto en la sintaxis de nuestro programa.
+
+### RuntimeError (errores de tiempo de ejecución): 
+Son errores que ocurren durante el tiempo de ejecucion de nuestro programa, luego que el compilador lo interpreta.
+
+### LogicalError (errores lógicos):
+Estos errores suelen ocurrir cuando el programa no cumple con las condiciones esperadas. Nuestra sintaxis esta bien, pero la logica no.
+
+## SyntaxError
+Suelen ser los errores mas comunes, ocurren cuando usamos la sintaxis ya predefinida de forma incorrecta.
+Cuando la sintaxis no es valida el motor de JavaScript no puede interpretarlo y por lo tanto lo rechaza de inmediato. Todo el codigo posterior a ese punto no se ejecutara.
+
+Veamos un ejemplo:
+
+![SyntaxError-img]()
+
+> - En este caso es 'x' nuestro identificador inesperado. Para solucionarlo debemos acomodar la sintaxis y dejarlo como:
+
+
+## TypeError
+Estos errores suelen ocurrir cuando el valor no suele ser de un tipo de datos esperado. 
+Tambien cuando se llama a un metodo o se lee una propiedad en un tipo de dato incorrecto, o en un objeto no definido previamente.
+Puede suceder tambien cuando el estado no se inicializa correctamente y cuando se presenta la interfaz de usuario conduce a una operacion fallida.
+Otra causa puede ser cuando se trata de utilizar una variable fuera de su propio ambito de datos... 
+A continuacion podemos ver algunos ejemplos:
+
+![TypeError-img]()
+
+
+## ReferenceError
+Estos errores suelen ocurrir cuando no podemos encontrar la referencia de la variable o esta se usa fuera del alcance actual de su uso.
+Tambien lo podemos encontrar cuando se intenta acceder a una variable que no fue declarada.
+Cuando intentamos usar una variable durante la zona temporal muerta, se suele recibir este error. Llamamos zona temporal muerta al periodo de tiempo entre que se inicializa la variable y se le asigna un valor.
+
+![RefError-img]()
+
+> - En el primer caso se trata de hacer un console.log de animals cuando este aun no fue declarado.
+> - En el segundo caso se hace un console.log de isActive y luego se le asigna un valor. Por lo tanto tratamos de acceder a isActive cuando estaba en su zona temporal muerta (entre que se levanto la variable y se le asigno un valor.) 
+> Podemos solucionarlo moviendo las declaraciones de variables antes de utilizarla.
+
+```javascript
+let isActive = true
+console.log(isActive)
+```
+
